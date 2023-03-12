@@ -33,7 +33,16 @@ end project_reti_logiche;
 
 architecture project_reti_logiche_arch of project_reti_logiche is
    --Signals
-   signal starts: std_logic;
+   signal valid_input: std_logic:='0';
+   signal address: std_logic_vector(15 downto 0):=(others=>'0');
+   signal channel: std_logic_vector(1 downto 0):=(others=>'0');
+   signal data_out: std_logic_vector(7 downto 0):=(others=>'0');   
+   signal done: std_logic:='0';
+   signal out_z0:std_logic_vector(7 downto 0):=(others=>'0');
+   signal out_z1:std_logic_vector(7 downto 0):=(others=>'0');
+   signal out_z2:std_logic_vector(7 downto 0):=(others=>'0');
+   signal out_z3:std_logic_vector(7 downto 0):=(others=>'0');
+   
    
    --Components
    component DeSerializeTransform is port(
@@ -47,14 +56,34 @@ architecture project_reti_logiche_arch of project_reti_logiche is
         );
     end component;
     
-    
-    
     begin
         DeSerT : DeSerializeTransform port map(
                  reset => i_rst, 
                  start => i_start,
                  i_clk => i_clk,
-                 input => i_w
-                 );   
+                 input => i_w,
+                 valid => valid_input,
+                 data => address,
+                 channel => channel
+                 );
                  
+    valid_input_trigger: process(i_clk, valid_input) --is triggered when received a valid input
+    begin
+    if(i_clk'event and i_clk='1') then
+        if(rising_edge(valid_input)) then
+            o_done<='1' after 2 ns;
+        else
+            o_done<='0';
+        end if;   
+    end if; 
+    end process;
+    
+    o_mem_addr<=address;
+    o_mem_en<=valid_input;
+    o_mem_we<='0';  
+    o_z0<=out_z0;
+    o_z1<=out_z1;
+    o_z2<=out_z2;
+    o_z3<=out_z3;
+            
 end project_reti_logiche_arch;
