@@ -1,0 +1,18 @@
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot project_tb_func_synth xil_defaultlib.project_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-4940] 'project_reti_logiche' remains a black box since it has no binding entity [C:/Users/Simone/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/sim_1/imports/Reti Logiche/tb_example23_agg.vhd:62]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture projecttb of entity xil_defaultlib.project_tb
+Built simulation snapshot project_tb_func_synth

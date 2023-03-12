@@ -1,0 +1,4 @@
+Time resolution is 1 ps
+Failure: TEST FALLITO (postreset Z0--Z3 != 0 ) found 0
+Time: 500 ns  Iteration: 2  Process: /project_tb/testRoutine  File: C:/Users/Simone/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/sim_1/imports/Reti Logiche/tb_example23.vhd
+$finish called at time : 500 ns : File "C:/Users/Simone/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/sim_1/imports/Reti Logiche/tb_example23.vhd" Line 126

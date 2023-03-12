@@ -1,0 +1,3 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Simone/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.sim/sim_1/synth/func/xsim/project_tb_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Simone/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/sim_1/imports/Reti Logiche/tb_example23_agg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'project_tb'

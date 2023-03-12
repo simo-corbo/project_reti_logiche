@@ -1,0 +1,10 @@
+Time resolution is 1 ps
+Failure: o_mem_en in an unexpected state
+Time: 50 ns  Iteration: 1  Process: /project_tb/MEM  File: C:/Users/Simone/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/sim_1/imports/Reti Logiche/tb_example23_agg.vhd
+$finish called at time : 50 ns : File "C:/Users/Simone/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/sim_1/imports/Reti Logiche/tb_example23_agg.vhd" Line 103
+Failure: o_mem_en in an unexpected state
+Time: 150 ns  Iteration: 1  Process: /project_tb/MEM  File: C:/Users/Simone/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/sim_1/imports/Reti Logiche/tb_example23_agg.vhd
+$finish called at time : 150 ns : File "C:/Users/Simone/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/sim_1/imports/Reti Logiche/tb_example23_agg.vhd" Line 103
+Failure: o_mem_en in an unexpected state
+Time: 250 ns  Iteration: 1  Process: /project_tb/MEM  File: C:/Users/Simone/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/sim_1/imports/Reti Logiche/tb_example23_agg.vhd
+$finish called at time : 250 ns : File "C:/Users/Simone/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/sim_1/imports/Reti Logiche/tb_example23_agg.vhd" Line 103

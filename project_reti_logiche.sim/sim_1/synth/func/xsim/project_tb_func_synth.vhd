@@ -1,0 +1,12 @@
+-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-- --------------------------------------------------------------------------------
+-- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+-- Date        : Sun Feb 26 01:01:14 2023
+-- Host        : SC running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -mode funcsim -nolib -force -file {C:/Users/Simone/OneDrive - Politecnico di Milano/3/Reti
+--               Logiche/project_reti_logiche/project_reti_logiche.sim/sim_1/synth/func/xsim/project_tb_func_synth.vhd}
+-- Design      : project_reti_logiche
+-- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
+--               synthesized. This netlist cannot be used for SDF annotated simulation.
+-- Device      : xc7a200tfbg484-1
+-- --------------------------------------------------------------------------------
