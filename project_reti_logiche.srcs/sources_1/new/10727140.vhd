@@ -67,15 +67,16 @@ architecture project_reti_logiche_arch of project_reti_logiche is
                  channel => channel
                  );
                  
-    valid_input_trigger: process(i_clk, valid_input) --is triggered when received a valid input
+    valid_input_trigger: process(valid_input) --is triggered when received a valid input
     begin
-    if(i_clk'event and i_clk='1') then
-        if(rising_edge(valid_input)) then
-            o_done<='1' after 2 ns;
-        else
+--    if(i_clk'event and i_clk='1') then
+        if(valid_input'event and valid_input='1') then
             o_done<='0';
+            o_done<='1' after 2 ns;
+       -- elsif (valid_input'event and valid_input='0') then
+       --     o_done<='0';
         end if;   
-    end if; 
+--    end if; 
     end process;
     
     o_mem_addr<=address;
