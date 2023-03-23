@@ -14,13 +14,16 @@ port(
         input: in std_logic;                        --input data
         data:  in std_logic_vector(7 downto 0);
         valid_input: out std_logic;                       --valid_input output
+        valid_data: out std_logic;
+        read_memory: out std_logic;
         address: out std_logic_vector(15 downto 0);    --output address
         channel: out std_logic_vector(1 downto 0);   --output channel
-        valid_data: out std_logic;
+
         out_0: out std_logic_vector(7 downto 0);
         out_1: out std_logic_vector(7 downto 0);
         out_2: out std_logic_vector(7 downto 0);
         out_3: out std_logic_vector(7 downto 0)
+                
         );
 end DeSerializeTransform;
 
@@ -37,7 +40,7 @@ architecture DST_arch of DeSerializeTransform is
     --      |   100    | SHOW      |   Receive address  |                                                                                                       |
     --      ----------------------------------------------------------------------------------------------------------------------------------------------------|
     
-    type STATES is (WAIT_address, GET_CH0, GET_ADD, SEND_ADD, SHOW);                               --States definition
+    type STATES is (WAIT_address, GET_CH0, GET_ADD, SHOW);                               --States definition
     signal mode   : STATES :=WAIT_address;                                         --current FSM State
     signal internal_channel: std_logic_vector(1 downto 0);  --link between input and channel(0)
     signal internal_out_address: std_logic_vector(15 downto 0) := (others=>'0');   --shifter register
@@ -50,31 +53,36 @@ begin
             if(reset='0') then                                                  --DeSerT works only if it's not in reset mode
                 case mode is
                     when WAIT_address =>                                           --WAIT_address state
-                        if(start='1') then                                          --If start=1 then the bit read on the input is the MSB of channel
-                            valid_input<='0'; 
-                            valid_data<='0';        
+                        read_memory<='0'; 
+                        valid_data<='0';  
+                        if(start='1') then                                          --If start=1 then the bit read on the input is the MSB of channel      
+                            valid_input<='0';
                             internal_channel(1)<=input;
                             internal_out_address<=(others=>'0');                       --internal reset of shift register
                             mode<=GET_CH0;                                          --transition in order to read the LSB of the output channel
                         end if;
-                    when GET_CH0 =>                                             --GET_CH0 state
+                    when GET_CH0 =>  
+                        valid_input<='0'; 
+                        valid_data<='0';                                             --GET_CH0 state
                         internal_channel(0)<=input;                                        --read from input LSB of channel
                         mode<=GET_ADD;                                              --transition to read the address
                         
-                    when GET_ADD =>                                             --GET_ADD state
+                    when GET_ADD => 
+                        valid_data<='0';                                              --keeps the valid flag to 0, waiting for start to descend
                         if start='1' then                                           --checks if GET_ADD is still necessary (input length can be arbitrary between 2 and 18)
                             internal_out_address(15 downto 1) <= internal_out_address(14 downto 0); --shift register
                             internal_out_address(0)<=input;    
                             valid_input<='0';
-                            valid_data<='0';                                              --keeps the valid flag to 0, waiting for start to descend
                         else                                    
                             valid_input<='1';  
-                            valid_data<='0';                                            --puts 1 in valid, because start=0, so the reading has finished
-                            mode<=SEND_ADD;                                        --returns in waiting mode
+                            mode<=SHOW; 
+                            read_memory<='1';                                     
                         end if;
-                    when SEND_ADD =>
-                            mode<=SHOW;
+--                    when SEND_ADD =>
+--                            valid_data<='0';
+--                            mode<=SHOW;
                     when SHOW =>
+                            read_memory<='0';
                             case internal_channel is
                                 when "00" => out_0<=data;
                                 when "01" => out_1<=data;
@@ -94,6 +102,5 @@ begin
            end if;
     end process;
     address<=internal_out_address;                --internal wiring
-    channel<=internal_channel;
-    
+    channel<=internal_channel;    
 end DST_arch;

@@ -19,9 +19,15 @@ ARCHITECTURE clockstart_arch OF clockstart_tb IS
     signal data: std_logic_vector(7 downto 0);
     signal address: std_logic_vector(15 downto 0);
     signal channel: std_logic_vector(1 downto 0);
-    signal write_enable: std_logic;
+    signal read_memory: std_logic;
+    
     signal valid_input: std_logic;
     signal valid_data: std_logic;
+    
+    signal out_0: std_logic_vector(7 downto 0);
+    signal out_1: std_logic_vector(7 downto 0);
+    signal out_2: std_logic_vector(7 downto 0);
+    signal out_3: std_logic_vector(7 downto 0);
     --signal startshifting: std_logic;
     CONSTANT SCENARIOLENGTH : INTEGER := 35; -- 5 + 3 + 20 + 7   (RST) + (CH2-MEM[1]) + 20 CYCLES + (CH1-MEM[6])
     SIGNAL scenario_rst : unsigned(0 TO SCENARIOLENGTH - 1)     := "00110" & "000" & "00000000000000000000" & "0000000";
@@ -31,22 +37,29 @@ ARCHITECTURE clockstart_arch OF clockstart_tb IS
     -- Channel 1 -> MEM[2] -> 75
 
     COMPONENT DeSerializeTransform IS
-        port(
-            reset: in std_logic;                        --reset signal from input
-            start: in std_logic;                        --start sequence channel(1), channel(0), (data)
-            i_clk: in std_logic;                        --clock signal
-            input: in std_logic;                        --input data
-            data:  in std_logic_vector(7 downto 0);
-            valid_input: out std_logic;                       --valid_input output
-            address: out std_logic_vector(15 downto 0);    --output address
-            channel: out std_logic_vector(1 downto 0);   --output channel
-            valid_data: out std_logic
+    port(
+        reset: in std_logic;                        --reset signal from input
+        start: in std_logic;                        --start sequence channel(1), channel(0), (data)
+        i_clk: in std_logic;                        --clock signal
+        input: in std_logic;                        --input data
+        data:  in std_logic_vector(7 downto 0);
+        valid_input: out std_logic;                       --valid_input output
+        valid_data: out std_logic;
+        read_memory: out std_logic;
+        address: out std_logic_vector(15 downto 0);    --output address
+        channel: out std_logic_vector(1 downto 0);   --output channel
+
+        out_0: out std_logic_vector(7 downto 0);
+        out_1: out std_logic_vector(7 downto 0);
+        out_2: out std_logic_vector(7 downto 0);
+        out_3: out std_logic_vector(7 downto 0)
+                
         );
     END COMPONENT DeSerializeTransform;
 
 BEGIN
     UUT : DeSerializeTransform
-    PORT MAP(tb_rst, tb_start, tb_clk, tb_w, data, valid_input, address, channel, valid_data);
+    PORT MAP(tb_rst, tb_start, tb_clk, tb_w, data, valid_input, valid_data, read_memory, address, channel, out_0, out_1, out_2, out_3);
     
 
 

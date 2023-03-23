@@ -1,0 +1,2083 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.17)  23 MAR 2023 15:23
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**prova.tex
+(./prova.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22>
+(c:/texlive/2022/texmf-dist/tex/latex/koma-script/scrartcl.cls
+Document Class: scrartcl 2022/10/12 v3.38 KOMA-Script document class (article)
+(c:/texlive/2022/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2022/10/12 v3.38 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+(c:/texlive/2022/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2022/10/12 v3.38 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(c:/texlive/2022/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2022/10/12 v3.38 KOMA-Script package (file load hooks)
+
+(c:/texlive/2022/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+Package: scrlfile-hook 2022/10/12 v3.38 KOMA-Script package (using LaTeX hooks)
+
+
+(c:/texlive/2022/texmf-dist/tex/latex/koma-script/scrlogo.sty
+Package: scrlogo 2022/10/12 v3.38 KOMA-Script package (logo)
+)))
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line
+ 368.
+))
+(c:/texlive/2022/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2022/10/12 v3.38 KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip48
+\scr@dte@tocline@numbox=\box51
+)
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 135.
+Class scrartcl Info: File `scrsize11pt.clo' used to setup font sizes on input l
+ine 2367.
+
+(c:/texlive/2022/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
+File: scrsize11pt.clo 2022/10/12 v3.38 KOMA-Script font size class option (11pt
+)
+)
+(c:/texlive/2022/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2022/10/12 v3.38 KOMA-Script package (type area)
+\ta@bcor=\skip49
+\ta@div=\count185
+\ta@hblk=\skip50
+\ta@vblk=\skip51
+\ta@temp=\skip52
+\footheight=\skip53
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 10
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 418.25555pt
+(typearea)              DIV departure   = -6%
+(typearea)              \evensidemargin = 17.3562pt
+(typearea)              \oddsidemargin  = 17.3562pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 595.80026pt
+(typearea)              \topmargin      = -25.16531pt
+(typearea)              \headheight     = 17.0pt
+(typearea)              \headsep        = 20.40001pt
+(typearea)              \topskip        = 11.0pt
+(typearea)              \footskip       = 47.6pt
+(typearea)              \baselineskip   = 13.6pt
+(typearea)              on input line 1767.
+)
+\c@part=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\scr@dte@section@maxnumwidth=\skip54
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\section on input line 4994.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\section on input line 4994.
+\scr@dte@part@maxnumwidth=\skip55
+Class scrartcl Info: using compatibility default `afterindent=false'
+(scrartcl)           for `\part on input line 5002.
+\scr@dte@subsection@maxnumwidth=\skip56
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subsection on input line 5012.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subsection on input line 5012.
+\scr@dte@subsubsection@maxnumwidth=\skip57
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subsubsection on input line 5022.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subsubsection on input line 5022.
+\scr@dte@paragraph@maxnumwidth=\skip58
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\paragraph on input line 5033.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\paragraph on input line 5033.
+\scr@dte@subparagraph@maxnumwidth=\skip59
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subparagraph on input line 5043.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subparagraph on input line 5043.
+\abovecaptionskip=\skip60
+\belowcaptionskip=\skip61
+\c@pti@nb@sid@b@x=\box52
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 6211.
+\scr@dte@figure@maxnumwidth=\skip62
+\c@figure=\count192
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 6227.
+\scr@dte@table@maxnumwidth=\skip63
+\c@table=\count193
+Class scrartcl Info: Redefining `\numberline' on input line 6397.
+\bibindent=\dimen140
+)
+(c:/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(c:/texlive/2022/texmf-dist/tex/latex/fourier/fourier.sty
+Package: fourier 2022/02/05 2.3 fourier-GUTenberg package
+
+(c:/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+Now handling font encoding FML ...
+... no UTF-8 mapping file for font encoding FML
+Now handling font encoding FMS ...
+... no UTF-8 mapping file for font encoding FMS
+Now handling font encoding FMX ...
+... no UTF-8 mapping file for font encoding FMX
+
+(c:/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+futs on input line 1
+12.
+
+(c:/texlive/2022/texmf-dist/tex/latex/fourier/t1futs.fd
+File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
+))
+(c:/texlive/2022/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(c:/texlive/2022/texmf-dist/tex/latex/fourier/fourier-orns.sty
+Package: fourier-orns 2022/02/05 2.3 fourier-ornaments package
+)
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 63.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `operators' in the math version `normal' on input line 63.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> T1/futs/m/n on input line 63.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `operators' in the math version `bold' on input line 63.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> T1/futs/m/n on input line 63.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  T1/futs/m/n --> T1/futs/b/n on input line 64.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 72.
+LaTeX Font Info:    Encoding `OML' has changed to `FML' for symbol font
+(Font)              `letters' in the math version `normal' on input line 72.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> FML/futmi/m/it on input line 72.
+LaTeX Font Info:    Encoding `OML' has changed to `FML' for symbol font
+(Font)              `letters' in the math version `bold' on input line 72.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> FML/futmi/m/it on input line 72.
+\symotherletters=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  FML/futmi/m/it --> FML/futmi/b/it on input line 74.
+LaTeX Font Info:    Overwriting symbol font `otherletters' in version `bold'
+(Font)                  FML/futm/m/it --> FML/futm/b/it on input line 75.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 76.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 77.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 78.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 79.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 80.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 81.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 82.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 83.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 84.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 85.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 86.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 126.
+LaTeX Font Info:    Encoding `OMS' has changed to `FMS' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 126.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> FMS/futm/m/n on input line 126.
+LaTeX Font Info:    Encoding `OMS' has changed to `FMS' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 126.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> FMS/futm/m/n on input line 126.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 127.
+LaTeX Font Info:    Encoding `OMX' has changed to `FMX' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 1
+27.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> FMX/futm/m/n on input line 127.
+LaTeX Font Info:    Encoding `OMX' has changed to `FMX' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 127
+.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> FMX/futm/m/n on input line 127.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 128.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> T1/futs/bx/n on input line 128.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> T1/futs/bx/n on input line 128.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 129.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 130.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> T1/futs/m/it on input line 130.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> T1/futs/m/it on input line 130.
+LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 131.
+LaTeX Font Info:    Redeclaring math symbol \parallel on input line 147.
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 161.
+LaTeX Font Info:    Redeclaring math symbol \varkappa on input line 199.
+LaTeX Font Info:    Redeclaring math symbol \varvarrho on input line 200.
+LaTeX Font Info:    Redeclaring math delimiter \Vert on input line 223.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 228.
+LaTeX Font Info:    Redeclaring math delimiter \Downarrow on input line 238.
+LaTeX Font Info:    Redeclaring math delimiter \backslash on input line 240.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 242.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 244.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 246.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 248.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 250.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 252.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 254.
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 256.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 260.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 261.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 262.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 263.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 264.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 265.
+LaTeX Font Info:    Redeclaring math accent \check on input line 266.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 267.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 268.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 269.
+\symUfutm=\mathgroup5
+)
+(c:/texlive/2022/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2023/02/13 3.86 The Babel package
+\babel@savecnt=\count194
+\U@D=\dimen141
+\l@unhyphenated=\language6
+
+(c:/texlive/2022/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count195
+
+(c:/texlive/2022/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language3). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language3). Reported on input line 108.
+))
+(c:/texlive/2022/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 11.
+)
+(c:/texlive/2022/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2023/03/13 v3.1a Micro-typographical refinements (RS)
+
+(c:/texlive/2022/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count196
+)
+\MT@toks=\toks17
+\MT@tempbox=\box53
+\MT@count=\count197
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1059.
+LaTeX Info: Redefining \leftprotrusion on input line 1060.
+\MT@prot@toks=\toks18
+LaTeX Info: Redefining \rightprotrusion on input line 1078.
+LaTeX Info: Redefining \textls on input line 1368.
+\MT@outer@kern=\dimen142
+LaTeX Info: Redefining \textmicrotypecontext on input line 1988.
+\MT@listname@count=\count198
+
+(c:/texlive/2022/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2023/03/13 v3.1a Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 902.
+LaTeX Info: Redefining \lslig on input line 902.
+\MT@outer@space=\skip64
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(c:/texlive/2022/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2023/03/13 v3.1a microtype main configuration file (RS)
+))
+(c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip65
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen143
+))
+(c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen144
+)
+(c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count199
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count266
+\leftroot@=\count267
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count268
+\DOTSCASE@=\count269
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box54
+\strutbox@=\box55
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen145
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count270
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count271
+\dotsspace@=\muskip16
+\c@parentequation=\count272
+\dspbrk@lvl=\count273
+\tag@help=\toks20
+\row@=\count274
+\column@=\count275
+\maxfields@=\count276
+\andhelp@=\toks21
+\eqnshift@=\dimen146
+\alignsep@=\dimen147
+\tagshift@=\dimen148
+\tagwidth@=\dimen149
+\totwidth@=\dimen150
+\lineht@=\dimen151
+\@envbody=\toks22
+\multlinegap=\skip66
+\multlinetaggap=\skip67
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(c:/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup6
+\symAMSb=\mathgroup7
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+LaTeX Font Info:    Redeclaring math symbol \square on input line 141.
+)
+(c:/texlive/2022/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks24
+\thm@bodyfont=\toks25
+\thm@headfont=\toks26
+\thm@notefont=\toks27
+\thm@headpunct=\toks28
+\thm@preskip=\skip68
+\thm@postskip=\skip69
+\thm@headsep=\skip70
+\dth@everypar=\toks29
+)
+(c:/texlive/2022/texmf-dist/tex/latex/xpatch/xpatch.sty
+(c:/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2023-02-22 L3 programming layer (loader) 
+
+(c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count277
+\l__pdf_internal_box=\box56
+))
+Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
+
+(c:/texlive/2022/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2023-02-02 L3 Experimental document command parser
+))
+Class scrartcl Info: amsthm's \deferred@thm@head patched.
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(c:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen152
+\Gin@req@width=\dimen153
+)
+(c:/texlive/2022/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(c:/texlive/2022/texmf-dist/tex/latex/sectsty/sectsty.sty
+Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
+les
+
+
+LaTeX Warning: Command \underbar  has changed.
+               Check if current package is valid.
+
+
+LaTeX Warning: Command \underline  has changed.
+               Check if current package is valid.
+
+)
+
+Class scrartcl Warning: Incompatible package `sectsty' loaded!
+(scrartcl)              Package `sectsty' up to version 2.0.2 is incompatible
+(scrartcl)              with KOMA-Script from version 2.8e released in 2001.
+(scrartcl)              You should avoid that package and configure the
+(scrartcl)              section titles of your document using the KOMA-Script
+(scrartcl)              user interface, e.g., \chapterlinesformat,
+(scrartcl)              \RedeclareSectionCommand etc. or you should ask
+(scrartcl)              the `sectsty' maintainer for a more compatible release.
+
+(scrartcl)              Ignoring this warning could result in several error
+(scrartcl)              messages and formatting issues after loading package
+(scrartcl)              `sectsty' on input line 43.
+
+
+Class scrartcl Warning: Usage of package `fancyhdr' together
+(scrartcl)              with a KOMA-Script class is not recommended.
+(scrartcl)              I'd suggest to use 
+(scrartcl)              package `scrlayer' or `scrlayer-scrpage', because
+(scrartcl)              they support KOMA-Script classes.
+(scrartcl)              With `fancyhdr' several features of class `scrartcl'
+(scrartcl)              like options `headsepline', `footsepline' or command
+(scrartcl)              `\MakeMarkcase' and the commands `\setkomafont' and
+(scrartcl)              `\addtokomafont' for the page style elements need
+(scrartcl)              explicite user intervention to work.
+(scrartcl)              Nevertheless, using requested
+(scrartcl)              package `fancyhdr' on input line 48.
+
+(c:/texlive/2022/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip71
+\f@nch@O@elh=\skip72
+\f@nch@O@erh=\skip73
+\f@nch@O@olh=\skip74
+\f@nch@O@orh=\skip75
+\f@nch@O@elf=\skip76
+\f@nch@O@erf=\skip77
+\f@nch@O@olf=\skip78
+\f@nch@O@orf=\skip79
+)
+(c:/texlive/2022/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(c:/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(c:/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks30
+\pgfutil@tempdima=\dimen154
+\pgfutil@tempdimb=\dimen155
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box57
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(c:/texlive/2022/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks31
+\pgfkeys@temptoks=\toks32
+
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.co
+de.tex
+\pgfkeys@tmptoks=\toks33
+))
+\pgf@x=\dimen156
+\pgf@y=\dimen157
+\pgf@xa=\dimen158
+\pgf@ya=\dimen159
+\pgf@xb=\dimen160
+\pgf@yb=\dimen161
+\pgf@xc=\dimen162
+\pgf@yc=\dimen163
+\pgf@xd=\dimen164
+\pgf@yd=\dimen165
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count278
+\c@pgf@countb=\count279
+\c@pgf@countc=\count280
+\c@pgf@countd=\count281
+\t@pgf@toka=\toks34
+\t@pgf@tokb=\toks35
+\t@pgf@tokc=\toks36
+\pgf@sys@id@count=\count282
+ (c:/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)))
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count283
+\pgfsyssoftpath@bigbuffer@items=\count284
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen166
+\pgfmath@count=\count285
+\pgfmath@box=\box58
+\pgfmath@toks=\toks37
+\pgfmath@stack@operand=\toks38
+\pgfmath@stack@operation=\toks39
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.te
+x)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric
+.code.tex)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.t
+ex)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.co
+de.tex)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.te
+x)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithm
+etics.code.tex)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count286
+))
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen167
+\pgf@picmaxx=\dimen168
+\pgf@picminy=\dimen169
+\pgf@picmaxy=\dimen170
+\pgf@pathminx=\dimen171
+\pgf@pathmaxx=\dimen172
+\pgf@pathminy=\dimen173
+\pgf@pathmaxy=\dimen174
+\pgf@xx=\dimen175
+\pgf@xy=\dimen176
+\pgf@yx=\dimen177
+\pgf@yy=\dimen178
+\pgf@zx=\dimen179
+\pgf@zy=\dimen180
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.cod
+e.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen181
+\pgf@path@lasty=\dimen182
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.te
+x
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen183
+\pgf@shorten@start@additional=\dimen184
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box59
+\pgf@hbox=\box60
+\pgf@layerbox@main=\box61
+\pgf@picture@serial@count=\count287
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
+.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen185
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.c
+ode.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen186
+\pgf@pt@y=\dimen187
+\pgf@pt@temp=\dimen188
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.co
+de.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen189
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen190
+\pgf@sys@shading@range@num=\count288
+\pgf@shadingcount=\count289
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box62
+) (c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code
+.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (c:/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.te
+x
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box63
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2022/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.st
+y
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen191
+\pgf@nodesepend=\dimen192
+)
+(c:/texlive/2022/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.st
+y
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(c:/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(c:/texlive/2022/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen193
+\pgffor@skip=\dimen194
+\pgffor@stack=\toks40
+\pgffor@toks=\toks41
+))
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
+de.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count290
+\pgfplotmarksize=\dimen195
+)
+\tikz@lastx=\dimen196
+\tikz@lasty=\dimen197
+\tikz@lastxsaved=\dimen198
+\tikz@lastysaved=\dimen199
+\tikz@lastmovetox=\dimen256
+\tikz@lastmovetoy=\dimen257
+\tikzleveldistance=\dimen258
+\tikzsiblingdistance=\dimen259
+\tikz@figbox=\box64
+\tikz@figbox@bg=\box65
+\tikz@tempbox=\box66
+\tikz@tempbox@bg=\box67
+\tikztreelevel=\count291
+\tikznumberofchildren=\count292
+\tikznumberofcurrentchild=\count293
+\tikz@fig@count=\count294
+
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count295
+\pgfmatrixcurrentcolumn=\count296
+\pgf@matrix@numberofcolumns=\count297
+)
+\tikz@expandcount=\count298
+
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryautomata.code.tex
+File: tikzlibraryautomata.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.m
+ultipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodepartlowerbox=\box68
+\pgfnodeparttwobox=\box69
+\pgfnodepartthreebox=\box70
+\pgfnodepartfourbox=\box71
+\pgfnodeparttwentybox=\box72
+\pgfnodepartnineteenbox=\box73
+\pgfnodeparteighteenbox=\box74
+\pgfnodepartseventeenbox=\box75
+\pgfnodepartsixteenbox=\box76
+\pgfnodepartfifteenbox=\box77
+\pgfnodepartfourteenbox=\box78
+\pgfnodepartthirteenbox=\box79
+\pgfnodeparttwelvebox=\box80
+\pgfnodepartelevenbox=\box81
+\pgfnodeparttenbox=\box82
+\pgfnodepartninebox=\box83
+\pgfnodeparteightbox=\box84
+\pgfnodepartsevenbox=\box85
+\pgfnodepartsixbox=\box86
+\pgfnodepartfivebox=\box87
+)))
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen260
+))
+
+./prova.tex:90: Package pgfkeys Error: I do not know the key '/tikz/&gt;', to w
+hich you passed 'stealth'', and I am going to ignore it. Perhaps you misspelled
+ it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.90 }
+      
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+
+(C:/Users/Simone/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_l
+ogiche/out/prova.aux)
+\openout1 = `prova.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 94.
+LaTeX Font Info:    Trying to load font information for FML+futm on input line 
+94.
+ (c:/texlive/2022/texmf-dist/tex/latex/fourier/fmlfutm.fd
+File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
+)
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 94.
+LaTeX Font Info:    Trying to load font information for FMS+futm on input line 
+94.
+(c:/texlive/2022/texmf-dist/tex/latex/fourier/fmsfutm.fd
+File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
+)
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 94.
+LaTeX Font Info:    Trying to load font information for FMX+futm on input line 
+94.
+
+(c:/texlive/2022/texmf-dist/tex/latex/fourier/fmxfutm.fd
+File: fmxfutm.fd futm-extension
+)
+LaTeX Font Info:    ... okay on input line 94.
+Package scrbase Info: activating english \abstractname on input line 94.
+Package scrbase Info: activating english \partname on input line 94.
+Package scrbase Info: activating english \figurename on input line 94.
+Package scrbase Info: activating english \tablename on input line 94.
+Package scrbase Info: activating english \contentsname on input line 94.
+Package scrbase Info: activating english \listfigurename on input line 94.
+Package scrbase Info: activating english \listtablename on input line 94.
+Package scrbase Info: activating english \refname on input line 94.
+Package scrbase Info: activating english \indexname on input line 94.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 94.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 94.
+LaTeX Info: Redefining \microtypecontext on input line 94.
+Package microtype Info: Applying patch `item' on input line 94.
+Package microtype Info: Applying patch `toc' on input line 94.
+Package microtype Info: Applying patch `eqnum' on input line 94.
+Package microtype Info: Applying patch `footnote' on input line 94.
+Package microtype Info: Applying patch `verbatim' on input line 94.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 94.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `futs' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+(c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count299
+\scratchdimen=\dimen261
+\scratchbox=\box88
+\nofMPsegments=\count300
+\nofMParguments=\count301
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count302
+\MPscratchDim=\dimen262
+\MPnumerator=\count303
+\makeMPintoPDFobject=\count304
+\everyMPtoPDFconversion=\toks43
+) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 9
+6.
+
+(c:/texlive/2022/texmf-dist/tex/latex/base/t1cmss.fd
+File: t1cmss.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmss' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Trying to load font information for OT1+bch on input line 9
+6.
+
+(c:/texlive/2022/texmf-dist/tex/latex/psnfss/ot1bch.fd
+File: ot1bch.fd 2004/10/18 font definitions for OT1/bch.
+)
+(c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-bch.cfg
+File: mt-bch.cfg 2007/03/03 v1.5 microtype config. file: Bitstream Charter (RS)
+
+)
+Package epstopdf Info: Source file: <Images/logo_polimi_scritta2.eps>
+(epstopdf)                    date: 2023-03-23 15:20:08
+(epstopdf)                    size: 754430 bytes
+(epstopdf)             Output file: <Images/logo_polimi_scritta2-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2023-03-23 15:20:08
+(epstopdf)                    size: 61736 bytes
+(epstopdf)             Command: <repstopdf --outfile=Images/logo_polimi_scritta
+2-eps-converted-to.pdf Images/logo_polimi_scritta2.eps>
+(epstopdf)             \includegraphics on input line 96.
+Package epstopdf Info: Output file is already uptodate.
+<Images/logo_polimi_scritta2-eps-converted-to.pdf, id=4, 342.27875pt x 100.375p
+t>
+File: Images/logo_polimi_scritta2-eps-converted-to.pdf Graphic file (type pdf)
+<use Images/logo_polimi_scritta2-eps-converted-to.pdf>
+Package pdftex.def Info: Images/logo_polimi_scritta2-eps-converted-to.pdf  used
+ on input line 96.
+(pdftex.def)             Requested size: 239.59348pt x 70.26201pt.
+LaTeX Font Info:    Trying to load font information for FML+futmi on input line
+ 96.
+
+(c:/texlive/2022/texmf-dist/tex/latex/fourier/fmlfutmi.fd
+File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
+)
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 13.24796pt on input line 96.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 96.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.35999pt on input line 96.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 13.24796pt on input line 96.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 96.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.35999pt on input line 96.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 96.
+
+
+(c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 96.
+
+
+(c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 102.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 102.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 102.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 102.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 102.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 102.
+
+./prova.tex:102: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.102         \node[state, initial] (q1) {$q_1$};
+                                                 
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./prova.tex:102: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.102         \node[state, initial] (q1) {$q_1$};
+                                                 
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Missing character: There is no _ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./prova.tex:102: Extra \endcsname.
+\pgfutil@colorlet ...g \csname color@#2\endcsname 
+                                                  \endcsname \relax \colorle...
+l.102         \node[state, initial] (q1) {$q_1$};
+                                                 
+I'm ignoring this, since I wasn't doing a \csname.
+
+./prova.tex:102: Extra \endcsname.
+\pgfutil@colorlet ...olor@#2\endcsname \endcsname 
+                                                  \relax \colorlet {#1}{#2}\...
+l.102         \node[state, initial] (q1) {$q_1$};
+                                                 
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+./prova.tex:102: Package xcolor Error: Undefined color `bln\protect \T1\textund
+erscore blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.102         \node[state, initial] (q1) {$q_1$};
+                                                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./prova.tex:102: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.102         \node[state, initial] (q1) {$q_1$};
+                                                 
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./prova.tex:102: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.102         \node[state, initial] (q1) {$q_1$};
+                                                 
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Missing character: There is no _ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./prova.tex:102: Extra \endcsname.
+\pgfutil@colorlet ...g \csname color@#2\endcsname 
+                                                  \endcsname \relax \colorle...
+l.102         \node[state, initial] (q1) {$q_1$};
+                                                 
+I'm ignoring this, since I wasn't doing a \csname.
+
+./prova.tex:102: Extra \endcsname.
+\pgfutil@colorlet ...olor@#2\endcsname \endcsname 
+                                                  \relax \colorlet {#1}{#2}\...
+l.102         \node[state, initial] (q1) {$q_1$};
+                                                 
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+./prova.tex:102: Package xcolor Error: Undefined color `bln\protect \T1\textund
+erscore blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.102         \node[state, initial] (q1) {$q_1$};
+                                                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./prova.tex:103: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.103 ...  \node[state, right of=q1] (q2) {$q_2$};
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./prova.tex:103: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.103 ...  \node[state, right of=q1] (q2) {$q_2$};
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Missing character: There is no _ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./prova.tex:103: Extra \endcsname.
+\pgfutil@colorlet ...g \csname color@#2\endcsname 
+                                                  \endcsname \relax \colorle...
+l.103 ...  \node[state, right of=q1] (q2) {$q_2$};
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+./prova.tex:103: Extra \endcsname.
+\pgfutil@colorlet ...olor@#2\endcsname \endcsname 
+                                                  \relax \colorlet {#1}{#2}\...
+l.103 ...  \node[state, right of=q1] (q2) {$q_2$};
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+./prova.tex:103: Package xcolor Error: Undefined color `bln\protect \T1\textund
+erscore blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.103 ...  \node[state, right of=q1] (q2) {$q_2$};
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./prova.tex:103: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.103 ...  \node[state, right of=q1] (q2) {$q_2$};
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./prova.tex:103: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.103 ...  \node[state, right of=q1] (q2) {$q_2$};
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Missing character: There is no _ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./prova.tex:103: Extra \endcsname.
+\pgfutil@colorlet ...g \csname color@#2\endcsname 
+                                                  \endcsname \relax \colorle...
+l.103 ...  \node[state, right of=q1] (q2) {$q_2$};
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+./prova.tex:103: Extra \endcsname.
+\pgfutil@colorlet ...olor@#2\endcsname \endcsname 
+                                                  \relax \colorlet {#1}{#2}\...
+l.103 ...  \node[state, right of=q1] (q2) {$q_2$};
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+./prova.tex:103: Package xcolor Error: Undefined color `bln\protect \T1\textund
+erscore blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.103 ...  \node[state, right of=q1] (q2) {$q_2$};
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./prova.tex:104: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.104 ...  \node[state, right of=q2] (q3) {$q_3$};
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./prova.tex:104: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.104 ...  \node[state, right of=q2] (q3) {$q_3$};
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Missing character: There is no _ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./prova.tex:104: Extra \endcsname.
+\pgfutil@colorlet ...g \csname color@#2\endcsname 
+                                                  \endcsname \relax \colorle...
+l.104 ...  \node[state, right of=q2] (q3) {$q_3$};
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+./prova.tex:104: Extra \endcsname.
+\pgfutil@colorlet ...olor@#2\endcsname \endcsname 
+                                                  \relax \colorlet {#1}{#2}\...
+l.104 ...  \node[state, right of=q2] (q3) {$q_3$};
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+./prova.tex:104: Package xcolor Error: Undefined color `bln\protect \T1\textund
+erscore blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.104 ...  \node[state, right of=q2] (q3) {$q_3$};
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./prova.tex:104: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.104 ...  \node[state, right of=q2] (q3) {$q_3$};
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./prova.tex:104: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.104 ...  \node[state, right of=q2] (q3) {$q_3$};
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Missing character: There is no _ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./prova.tex:104: Extra \endcsname.
+\pgfutil@colorlet ...g \csname color@#2\endcsname 
+                                                  \endcsname \relax \colorle...
+l.104 ...  \node[state, right of=q2] (q3) {$q_3$};
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+./prova.tex:104: Extra \endcsname.
+\pgfutil@colorlet ...olor@#2\endcsname \endcsname 
+                                                  \relax \colorlet {#1}{#2}\...
+l.104 ...  \node[state, right of=q2] (q3) {$q_3$};
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+./prova.tex:104: Package xcolor Error: Undefined color `bln\protect \T1\textund
+erscore blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.104 ...  \node[state, right of=q2] (q3) {$q_3$};
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./prova.tex:114: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.114 ..., initial, initial where=left] (1) {$ $};
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./prova.tex:114: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.114 ..., initial, initial where=left] (1) {$ $};
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Missing character: There is no _ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./prova.tex:114: Extra \endcsname.
+\pgfutil@colorlet ...g \csname color@#2\endcsname 
+                                                  \endcsname \relax \colorle...
+l.114 ..., initial, initial where=left] (1) {$ $};
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+./prova.tex:114: Extra \endcsname.
+\pgfutil@colorlet ...olor@#2\endcsname \endcsname 
+                                                  \relax \colorlet {#1}{#2}\...
+l.114 ..., initial, initial where=left] (1) {$ $};
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+./prova.tex:114: Package xcolor Error: Undefined color `bln\protect \T1\textund
+erscore blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.114 ..., initial, initial where=left] (1) {$ $};
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./prova.tex:114: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.114 ..., initial, initial where=left] (1) {$ $};
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./prova.tex:114: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.114 ..., initial, initial where=left] (1) {$ $};
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Missing character: There is no _ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./prova.tex:114: Extra \endcsname.
+\pgfutil@colorlet ...g \csname color@#2\endcsname 
+                                                  \endcsname \relax \colorle...
+l.114 ..., initial, initial where=left] (1) {$ $};
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+./prova.tex:114: Extra \endcsname.
+\pgfutil@colorlet ...olor@#2\endcsname \endcsname 
+                                                  \relax \colorlet {#1}{#2}\...
+l.114 ..., initial, initial where=left] (1) {$ $};
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+./prova.tex:114: Package xcolor Error: Undefined color `bln\protect \T1\textund
+erscore blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.114 ..., initial, initial where=left] (1) {$ $};
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./prova.tex:115: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.115         \node[state, right of=1] (2) {$ $};
+                                                 
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./prova.tex:115: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.115         \node[state, right of=1] (2) {$ $};
+                                                 
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Missing character: There is no _ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./prova.tex:115: Extra \endcsname.
+\pgfutil@colorlet ...g \csname color@#2\endcsname 
+                                                  \endcsname \relax \colorle...
+l.115         \node[state, right of=1] (2) {$ $};
+                                                 
+I'm ignoring this, since I wasn't doing a \csname.
+
+./prova.tex:115: Extra \endcsname.
+\pgfutil@colorlet ...olor@#2\endcsname \endcsname 
+                                                  \relax \colorlet {#1}{#2}\...
+l.115         \node[state, right of=1] (2) {$ $};
+                                                 
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+./prova.tex:115: Package xcolor Error: Undefined color `bln\protect \T1\textund
+erscore blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.115         \node[state, right of=1] (2) {$ $};
+                                                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./prova.tex:115: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.115         \node[state, right of=1] (2) {$ $};
+                                                 
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./prova.tex:115: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.115         \node[state, right of=1] (2) {$ $};
+                                                 
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Missing character: There is no _ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./prova.tex:115: Extra \endcsname.
+\pgfutil@colorlet ...g \csname color@#2\endcsname 
+                                                  \endcsname \relax \colorle...
+l.115         \node[state, right of=1] (2) {$ $};
+                                                 
+I'm ignoring this, since I wasn't doing a \csname.
+
+./prova.tex:115: Extra \endcsname.
+\pgfutil@colorlet ...olor@#2\endcsname \endcsname 
+                                                  \relax \colorlet {#1}{#2}\...
+l.115         \node[state, right of=1] (2) {$ $};
+                                                 
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+./prova.tex:115: Package xcolor Error: Undefined color `bln\protect \T1\textund
+erscore blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.115         \node[state, right of=1] (2) {$ $};
+                                                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./prova.tex:116: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.116         \node[state, right of=2] (3) {$ $};
+                                                 
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./prova.tex:116: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.116         \node[state, right of=2] (3) {$ $};
+                                                 
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Missing character: There is no _ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./prova.tex:116: Extra \endcsname.
+\pgfutil@colorlet ...g \csname color@#2\endcsname 
+                                                  \endcsname \relax \colorle...
+l.116         \node[state, right of=2] (3) {$ $};
+                                                 
+I'm ignoring this, since I wasn't doing a \csname.
+
+./prova.tex:116: Extra \endcsname.
+\pgfutil@colorlet ...olor@#2\endcsname \endcsname 
+                                                  \relax \colorlet {#1}{#2}\...
+l.116         \node[state, right of=2] (3) {$ $};
+                                                 
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+./prova.tex:116: Package xcolor Error: Undefined color `bln\protect \T1\textund
+erscore blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.116         \node[state, right of=2] (3) {$ $};
+                                                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./prova.tex:116: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.116         \node[state, right of=2] (3) {$ $};
+                                                 
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./prova.tex:116: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.116         \node[state, right of=2] (3) {$ $};
+                                                 
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Missing character: There is no _ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./prova.tex:116: Extra \endcsname.
+\pgfutil@colorlet ...g \csname color@#2\endcsname 
+                                                  \endcsname \relax \colorle...
+l.116         \node[state, right of=2] (3) {$ $};
+                                                 
+I'm ignoring this, since I wasn't doing a \csname.
+
+./prova.tex:116: Extra \endcsname.
+\pgfutil@colorlet ...olor@#2\endcsname \endcsname 
+                                                  \relax \colorlet {#1}{#2}\...
+l.116         \node[state, right of=2] (3) {$ $};
+                                                 
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+./prova.tex:116: Package xcolor Error: Undefined color `bln\protect \T1\textund
+erscore blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.116         \node[state, right of=2] (3) {$ $};
+                                                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./prova.tex:117: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.117         \node[state, right of=3] (4) {$ $};
+                                                 
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./prova.tex:117: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.117         \node[state, right of=3] (4) {$ $};
+                                                 
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Missing character: There is no _ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./prova.tex:117: Extra \endcsname.
+\pgfutil@colorlet ...g \csname color@#2\endcsname 
+                                                  \endcsname \relax \colorle...
+l.117         \node[state, right of=3] (4) {$ $};
+                                                 
+I'm ignoring this, since I wasn't doing a \csname.
+
+./prova.tex:117: Extra \endcsname.
+\pgfutil@colorlet ...olor@#2\endcsname \endcsname 
+                                                  \relax \colorlet {#1}{#2}\...
+l.117         \node[state, right of=3] (4) {$ $};
+                                                 
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+./prova.tex:117: Package xcolor Error: Undefined color `bln\protect \T1\textund
+erscore blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.117         \node[state, right of=3] (4) {$ $};
+                                                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./prova.tex:117: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.117         \node[state, right of=3] (4) {$ $};
+                                                 
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./prova.tex:117: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.117         \node[state, right of=3] (4) {$ $};
+                                                 
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Missing character: There is no _ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./prova.tex:117: Extra \endcsname.
+\pgfutil@colorlet ...g \csname color@#2\endcsname 
+                                                  \endcsname \relax \colorle...
+l.117         \node[state, right of=3] (4) {$ $};
+                                                 
+I'm ignoring this, since I wasn't doing a \csname.
+
+./prova.tex:117: Extra \endcsname.
+\pgfutil@colorlet ...olor@#2\endcsname \endcsname 
+                                                  \relax \colorlet {#1}{#2}\...
+l.117         \node[state, right of=3] (4) {$ $};
+                                                 
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+./prova.tex:117: Package xcolor Error: Undefined color `bln\protect \T1\textund
+erscore blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.117         \node[state, right of=3] (4) {$ $};
+                                                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./prova.tex:118: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.118 ...\node[state, below right of=3] (5) {$ $};
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./prova.tex:118: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.118 ...\node[state, below right of=3] (5) {$ $};
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Missing character: There is no _ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./prova.tex:118: Extra \endcsname.
+\pgfutil@colorlet ...g \csname color@#2\endcsname 
+                                                  \endcsname \relax \colorle...
+l.118 ...\node[state, below right of=3] (5) {$ $};
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+./prova.tex:118: Extra \endcsname.
+\pgfutil@colorlet ...olor@#2\endcsname \endcsname 
+                                                  \relax \colorlet {#1}{#2}\...
+l.118 ...\node[state, below right of=3] (5) {$ $};
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+./prova.tex:118: Package xcolor Error: Undefined color `bln\protect \T1\textund
+erscore blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.118 ...\node[state, below right of=3] (5) {$ $};
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./prova.tex:118: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.118 ...\node[state, below right of=3] (5) {$ $};
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./prova.tex:118: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.118 ...\node[state, below right of=3] (5) {$ $};
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Missing character: There is no _ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./prova.tex:118: Extra \endcsname.
+\pgfutil@colorlet ...g \csname color@#2\endcsname 
+                                                  \endcsname \relax \colorle...
+l.118 ...\node[state, below right of=3] (5) {$ $};
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+./prova.tex:118: Extra \endcsname.
+\pgfutil@colorlet ...olor@#2\endcsname \endcsname 
+                                                  \relax \colorlet {#1}{#2}\...
+l.118 ...\node[state, below right of=3] (5) {$ $};
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+./prova.tex:118: Package xcolor Error: Undefined color `bln\protect \T1\textund
+erscore blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.118 ...\node[state, below right of=3] (5) {$ $};
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./prova.tex:119: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.119 ... \node[state, below left of=3] (6) {$ $};
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./prova.tex:119: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.119 ... \node[state, below left of=3] (6) {$ $};
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Missing character: There is no _ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./prova.tex:119: Extra \endcsname.
+\pgfutil@colorlet ...g \csname color@#2\endcsname 
+                                                  \endcsname \relax \colorle...
+l.119 ... \node[state, below left of=3] (6) {$ $};
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+./prova.tex:119: Extra \endcsname.
+\pgfutil@colorlet ...olor@#2\endcsname \endcsname 
+                                                  \relax \colorlet {#1}{#2}\...
+l.119 ... \node[state, below left of=3] (6) {$ $};
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+./prova.tex:119: Package xcolor Error: Undefined color `bln\protect \T1\textund
+erscore blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.119 ... \node[state, below left of=3] (6) {$ $};
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./prova.tex:119: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.119 ... \node[state, below left of=3] (6) {$ $};
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./prova.tex:119: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.119 ... \node[state, below left of=3] (6) {$ $};
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Missing character: There is no _ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./prova.tex:119: Extra \endcsname.
+\pgfutil@colorlet ...g \csname color@#2\endcsname 
+                                                  \endcsname \relax \colorle...
+l.119 ... \node[state, below left of=3] (6) {$ $};
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+./prova.tex:119: Extra \endcsname.
+\pgfutil@colorlet ...olor@#2\endcsname \endcsname 
+                                                  \relax \colorlet {#1}{#2}\...
+l.119 ... \node[state, below left of=3] (6) {$ $};
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+./prova.tex:119: Package xcolor Error: Undefined color `bln\protect \T1\textund
+erscore blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.119 ... \node[state, below left of=3] (6) {$ $};
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./prova.tex:120: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.120         \node[state, right of=5] (7) {$ $};
+                                                 
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./prova.tex:120: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.120         \node[state, right of=5] (7) {$ $};
+                                                 
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Missing character: There is no _ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./prova.tex:120: Extra \endcsname.
+\pgfutil@colorlet ...g \csname color@#2\endcsname 
+                                                  \endcsname \relax \colorle...
+l.120         \node[state, right of=5] (7) {$ $};
+                                                 
+I'm ignoring this, since I wasn't doing a \csname.
+
+./prova.tex:120: Extra \endcsname.
+\pgfutil@colorlet ...olor@#2\endcsname \endcsname 
+                                                  \relax \colorlet {#1}{#2}\...
+l.120         \node[state, right of=5] (7) {$ $};
+                                                 
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+./prova.tex:120: Package xcolor Error: Undefined color `bln\protect \T1\textund
+erscore blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.120         \node[state, right of=5] (7) {$ $};
+                                                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./prova.tex:120: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.120         \node[state, right of=5] (7) {$ $};
+                                                 
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./prova.tex:120: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.120         \node[state, right of=5] (7) {$ $};
+                                                 
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Missing character: There is no _ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./prova.tex:120: Extra \endcsname.
+\pgfutil@colorlet ...g \csname color@#2\endcsname 
+                                                  \endcsname \relax \colorle...
+l.120         \node[state, right of=5] (7) {$ $};
+                                                 
+I'm ignoring this, since I wasn't doing a \csname.
+
+./prova.tex:120: Extra \endcsname.
+\pgfutil@colorlet ...olor@#2\endcsname \endcsname 
+                                                  \relax \colorlet {#1}{#2}\...
+l.120         \node[state, right of=5] (7) {$ $};
+                                                 
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+./prova.tex:120: Package xcolor Error: Undefined color `bln\protect \T1\textund
+erscore blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.120         \node[state, right of=5] (7) {$ $};
+                                                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (7.39743pt too wide) in paragraph at lines 123--124
+[][]$\FML/futmi/m/it/10.95 Initial$  
+ []
+
+
+Overfull \hbox (15.30331pt too wide) in paragraph at lines 124--125
+[][]$\FML/futmi/m/it/10.95 Pending$  
+ []
+
+
+Overfull \hbox (6.21487pt too wide) in paragraph at lines 125--126
+[][]$\FML/futmi/m/it/10.95 Closed$  
+ []
+
+
+Overfull \hbox (9.49986pt too wide) in paragraph at lines 126--127
+[][]$\FML/futmi/m/it/10.95 Suceess$  
+ []
+
+
+Overfull \hbox (10.69339pt too wide) in paragraph at lines 129--131
+[][]$\FML/futmi/m/it/10.95 Failure$  
+ []
+
+
+Overfull \hbox (4.86299pt too wide) in paragraph at lines 134--134
+[][]\T1/futs/m/n/10.95 (-20) request 
+ []
+
+[1
+
+
+{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Images/logo_p
+olimi_scritta2-eps-converted-to.pdf>] [2]
+(C:/Users/Simone/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_l
+ogiche/out/prova.aux) ) 
+Here is how much of TeX's memory you used:
+ 21636 strings out of 477932
+ 448335 string characters out of 5838178
+ 1867382 words of memory out of 5000000
+ 41317 multiletter control sequences out of 15000+600000
+ 594509 words of font info for 187 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 108i,11n,106p,10624b,907s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}
+<c:/texlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb><c:/texlive
+/2022/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb><c:/texlive/2022/texmf-dis
+t/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on "C:/Users/Simone/OneDrive - Politecnico di Milano/3/Reti Logi
+che/project_reti_logiche/out/prova.pdf" (2 pages, 107265 bytes).
+PDF statistics:
+ 34 PDF objects out of 1000 (max. 8388607)
+ 21 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 57874 words of extra memory for PDF output out of 61914 (max. 10000000)
+
