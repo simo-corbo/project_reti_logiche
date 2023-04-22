@@ -3,7 +3,7 @@
 --Progetto di Simone Corbo
 --Codice Persona 10727140
 --Matricola 955854
---II Consegna 1 aprile 2023
+--III Consegna 15 maggio 2023
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -34,6 +34,7 @@ end project_reti_logiche;
 architecture project_reti_logiche_arch of project_reti_logiche is
    --Signals
    signal valid_input: std_logic:='0';
+   signal valid_data: std_logic:='0';
    signal address: std_logic_vector(15 downto 0):=(others=>'0');
    signal channel: std_logic_vector(1 downto 0):=(others=>'0');
    signal data_out: std_logic_vector(7 downto 0):=(others=>'0');   
@@ -46,13 +47,21 @@ architecture project_reti_logiche_arch of project_reti_logiche is
    
    --Components
    component DeSerializeTransform is port(
-        reset: in std_logic;
-        start: in std_logic;
-        i_clk: in std_logic;
-        input: in std_logic;
-        valid: out std_logic;
-        data: out std_logic_vector(15 downto 0);
-        channel: out std_logic_vector(1 downto 0)
+        reset: in std_logic;                        		--reset signal from input
+        start: in std_logic;                       			--start sequence channel(1), channel(0), (data)
+        i_clk: in std_logic;                        		--clock signal
+        input: in std_logic;                        		--input data
+        data:  in std_logic_vector(7 downto 0);				--data from memory
+        valid_input: out std_logic;                       	--valid_input output
+        valid_data: out std_logic;							--valid_data in output
+        read_memory: out std_logic;							--memory enable
+        address: out std_logic_vector(15 downto 0);    		--output memory address
+        channel: out std_logic_vector(1 downto 0);   		--output channel
+
+        out_0: out std_logic_vector(7 downto 0);			--channel 0
+        out_1: out std_logic_vector(7 downto 0);			--channel 1
+        out_2: out std_logic_vector(7 downto 0);			--channel 2
+        out_3: out std_logic_vector(7 downto 0)				--channel 3
         );
     end component;
     
@@ -61,10 +70,23 @@ architecture project_reti_logiche_arch of project_reti_logiche is
                  reset => i_rst, 
                  start => i_start,
                  i_clk => i_clk,
+                 
                  input => i_w,
-                 valid => valid_input,
-                 data => address,
-                 channel => channel
+                 
+                 data =>i_mem_data,
+                 
+                 valid_input=>valid_input,
+                 valid_data => valid_data,
+                 
+                 read_memory=>o_mem_en,
+                 address=>o_mem_addr, 
+
+                 channel=>channel,
+                 
+                 out_0=>o_z0,
+                 out_1=>out_z1,
+                 out_2=>out_z2,
+                 out_3=>out_z3
                  );
                  
     valid_input_trigger: process(valid_input) --is triggered when received a valid input

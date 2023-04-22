@@ -2,12 +2,12 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Mon Mar 13 11:52:19 2023
-# Process ID: 14620
-# Current directory: C:/Users/Simone/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.runs/synth_1
+# Start of session at: Sat Apr 22 10:44:27 2023
+# Process ID: 16092
+# Current directory: C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.runs/synth_1
 # Command line: vivado.exe -log project_reti_logiche.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source project_reti_logiche.tcl
-# Log file: C:/Users/Simone/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.runs/synth_1/project_reti_logiche.vds
-# Journal file: C:/Users/Simone/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.runs/synth_1\vivado.jou
-# Running On: SC, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 4, Host memory: 8271 MB
+# Log file: C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.runs/synth_1/project_reti_logiche.vds
+# Journal file: C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.runs/synth_1\vivado.jou
+# Running On: LAPTOP-4J4IK2F8, OS: Windows, CPU Frequency: 1992 MHz, CPU Physical cores: 4, Host memory: 17033 MB
 #-----------------------------------------------------------
 source project_reti_logiche.tcl -notrace
