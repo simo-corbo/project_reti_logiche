@@ -38,75 +38,71 @@ architecture project_reti_logiche_arch of project_reti_logiche is
    signal address: std_logic_vector(15 downto 0):=(others=>'0');
    signal channel: std_logic_vector(1 downto 0):=(others=>'0');
    signal data_out: std_logic_vector(7 downto 0):=(others=>'0');   
-   signal done: std_logic:='0';
-   signal out_z0:std_logic_vector(7 downto 0):=(others=>'0');
-   signal out_z1:std_logic_vector(7 downto 0):=(others=>'0');
-   signal out_z2:std_logic_vector(7 downto 0):=(others=>'0');
-   signal out_z3:std_logic_vector(7 downto 0):=(others=>'0');
-   
-   
+      
    --Components
    component DeSerializeTransform is port(
         reset: in std_logic;                        		--reset signal from input
         start: in std_logic;                       			--start sequence channel(1), channel(0), (data)
         i_clk: in std_logic;                        		--clock signal
         input: in std_logic;                        		--input data
-        data:  in std_logic_vector(7 downto 0);				--data from memory
+        
         valid_input: out std_logic;                       	--valid_input output
-        valid_data: out std_logic;							--valid_data in output
-        read_memory: out std_logic;							--memory enable
         address: out std_logic_vector(15 downto 0);    		--output memory address
-        channel: out std_logic_vector(1 downto 0);   		--output channel
-
-        out_0: out std_logic_vector(7 downto 0);			--channel 0
-        out_1: out std_logic_vector(7 downto 0);			--channel 1
-        out_2: out std_logic_vector(7 downto 0);			--channel 2
-        out_3: out std_logic_vector(7 downto 0)				--channel 3
+        channel: out std_logic_vector(1 downto 0)   		--output channel
+        );
+    end component;
+    
+    component DataSwitch is port(
+        reset: in std_logic;                        		--reset signal from input
+        i_clk: in std_logic;                        		--clock signal from input
+        
+        valid_input: in std_logic;                       	--valid input from DeSerT
+        input_channel: in std_logic_vector(1 downto 0);  		    --channel selector from DeSerT
+        input_address: in std_logic_vector(15 downto 0);    		--memory address from DeSerT
+        
+        data: in std_logic_vector(7 downto 0);              --data from memory        
+        
+        o_z0: out std_logic_vector(7 downto 0);             --channel 0
+        o_z1: out std_logic_vector(7 downto 0);             --channel 1
+        o_z2: out std_logic_vector(7 downto 0);             --channel 2
+        o_z3: out std_logic_vector(7 downto 0);             --channel 3
+        done: out std_logic;                                --end of elaboration
+        
+        memory_enable: out std_logic;
+        memory_address: out std_logic_vector(15 downto 0)
         );
     end component;
     
     begin
         DeSerT : DeSerializeTransform port map(
-                 reset => i_rst, 
-                 start => i_start,
-                 i_clk => i_clk,
-                 
-                 input => i_w,
-                 
-                 data =>i_mem_data,
-                 
-                 valid_input=>valid_input,
-                 valid_data => valid_data,
-                 
-                 read_memory=>o_mem_en,
-                 address=>o_mem_addr, 
-
-                 channel=>channel,
-                 
-                 out_0=>o_z0,
-                 out_1=>o_z1,
-                 out_2=>o_z2,
-                 out_3=>o_z3
+                    reset => i_rst, 
+                    start => i_start,
+                    i_clk => i_clk,
+                    input => i_w,
+                                  
+                    valid_input=>valid_input,
+                    address=>address, 
+                    channel=>channel
                  );
-                 
-    valid_input_trigger: process(valid_input) --is triggered when received a valid input
-    begin
---    if(i_clk'event and i_clk='1') then
-        if(valid_input'event and valid_input='1') then
-            o_done<='0';
-            o_done<='1' after 2 ns;
-       -- elsif (valid_input'event and valid_input='0') then
-       --     o_done<='0';
-        end if;   
---    end if; 
-    end process;
-    
-    --o_mem_addr<=address;
-    --o_mem_en<=valid_input;
-    --o_mem_we<='0';  
-    --o_z0<=out_z0;
-    --o_z1<=out_z1;
-    --o_z2<=out_z2;
-    --o_z3<=out_z3;
-            
+        DS     : DataSwitch port map(
+                    reset => i_rst,
+                    i_clk =>i_clk,
+                    
+                    valid_input => valid_input,
+                    input_channel =>channel,
+                    input_address => address,
+                    
+                    data =>i_mem_data,
+                    
+                    o_z0 => o_z0,
+                    o_z1 => o_z1,
+                    o_z2 => o_z2,
+                    o_z3 => o_z3,
+                    done => o_done,
+                    
+                    memory_enable => o_mem_en,
+                    memory_address => o_mem_addr
+                    );
+
+        o_mem_we<='0'; --memory writing non required
 end project_reti_logiche_arch;

@@ -1,1 +1,4 @@
 Time resolution is 1 ps
+Failure: Simulation Ended! TEST PASSATO (EXAMPLE)
+Time: 3900 ns  Iteration: 0  Process: /project_tb/testRoutine  File: C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/test2/new/Example.vhd
+$finish called at time : 3900 ns : File "C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/test2/new/Example.vhd" Line 153
