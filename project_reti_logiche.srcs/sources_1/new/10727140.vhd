@@ -84,9 +84,9 @@ architecture project_reti_logiche_arch of project_reti_logiche is
                  channel=>channel,
                  
                  out_0=>o_z0,
-                 out_1=>out_z1,
-                 out_2=>out_z2,
-                 out_3=>out_z3
+                 out_1=>o_z1,
+                 out_2=>o_z2,
+                 out_3=>o_z3
                  );
                  
     valid_input_trigger: process(valid_input) --is triggered when received a valid input
@@ -101,12 +101,12 @@ architecture project_reti_logiche_arch of project_reti_logiche is
 --    end if; 
     end process;
     
-    o_mem_addr<=address;
-    o_mem_en<=valid_input;
-    o_mem_we<='0';  
-    o_z0<=out_z0;
-    o_z1<=out_z1;
-    o_z2<=out_z2;
-    o_z3<=out_z3;
+    --o_mem_addr<=address;
+    --o_mem_en<=valid_input;
+    --o_mem_we<='0';  
+    --o_z0<=out_z0;
+    --o_z1<=out_z1;
+    --o_z2<=out_z2;
+    --o_z3<=out_z3;
             
 end project_reti_logiche_arch;

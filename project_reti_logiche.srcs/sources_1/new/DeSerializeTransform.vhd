@@ -1,8 +1,6 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
---use IEEE.std_logic_arith.all;
---use IEEE.std_logic_signed.all;
 
 
 entity DeSerializeTransform is
@@ -42,7 +40,7 @@ architecture DST_arch of DeSerializeTransform is
     
     type STATES is (WAIT_ADD, GET_CH0, GET_ADD, SEND_ADD, SAVE, SHOW, RST);                               --States definition
     signal mode   : STATES :=WAIT_ADD;                                         --current FSM State
-    signal internal_channel: std_logic_vector(1 downto 0);  --link between input and channel(0)
+    signal internal_channel: std_logic_vector(1 downto 0) :=(others=>'0');  --link between input and channel(0)
     signal internal_out_address: std_logic_vector(15 downto 0) := (others=>'0');   --shifter register
 
 begin
@@ -51,7 +49,15 @@ begin
     begin
         if(i_clk'event and i_clk='1') then                                      --DeSerT synchronized on clock's raising edge
             if(reset='1') then
-                mode<=RST;
+                    mode<=RST;
+                    valid_input<='0';
+                    internal_channel<=(others=>'0');                                                 --Internal reset
+                    internal_out_address<=(others=>'0');
+                    out_0<=(others => '0');
+                    out_1<=(others => '0');
+                    out_2<=(others => '0');
+                    out_3<=(others => '0');
+                    mode<=WAIT_ADD;                                                				     --mode changed to WAIT_ADD
             end if;
             case mode is
                 when WAIT_ADD =>                                           --WAIT_ADD state
@@ -105,15 +111,7 @@ begin
                         
                         
                 when RST =>
-                    valid_input<='0';
-                    internal_channel<=(others=>'0');                                                 --Internal reset
-                    internal_out_address<=(others=>'0');
-                    out_0<=(others => '0');
-                    out_1<=(others => '0');
-                    out_2<=(others => '0');
-                    out_3<=(others => '0');
-                    mode<=WAIT_ADD;                                                				     --mode changed to WAIT_ADD
-
+                    mode<=WAIT_ADD;
                 end case;
           end if;  
     end process;
