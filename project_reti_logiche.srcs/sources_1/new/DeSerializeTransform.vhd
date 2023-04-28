@@ -56,7 +56,6 @@ begin
                     valid_input<='0';                                               --redundant setting of valid_input
                     internal_channel(0)<=input;                                     --read from input LSB of channel
                     mode<=GET_ADD;                                                  --transition to read the address
-                    
                 when GET_ADD =>                                                 --GET_ADD implements the shift register 
                     if start='1' then                                               --checks if GET_ADD is still necessary (input length can be arbitrary between 2 and 18)
                         valid_input<='0';                                               --redundant setting of valid_input
@@ -67,6 +66,8 @@ begin
                         mode<=SEND_INPUT;                                            --keeps the SEND_INPUT on for 2 clock cycles                                   
                     end if;
                 when SEND_INPUT =>
+                        mode<=WAIT_INPUT;
+                when others =>
                         mode<=WAIT_INPUT;
                 end case;
           end if;  

@@ -104,5 +104,5 @@ architecture project_reti_logiche_arch of project_reti_logiche is
                     memory_address => o_mem_addr
                     );
 
-        o_mem_we<='0'; --memory writing non required
+        o_mem_we<='0'; --memory writing not required
 end project_reti_logiche_arch;

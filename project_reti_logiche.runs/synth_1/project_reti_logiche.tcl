@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a200tfbg484-1
 
@@ -85,6 +86,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
+  {C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/DataSwitch.vhd}
   {C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/DeSerializeTransform.vhd}
   {C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/10727140.vhd}
 }

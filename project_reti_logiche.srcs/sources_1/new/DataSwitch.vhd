@@ -41,7 +41,6 @@ architecture DS_arch of DataSwitch is
     signal mode   : STATES :=WAIT_INPUT;                                           --current FSM State
 
     signal internal_address: std_logic_vector(15 downto 0) := (others=>'0');--shifter register
-    signal internal_valid: std_logic :='0';
     signal internal_z0: std_logic_vector(7 downto 0):=(others=>'0');        --internal channel 0
     signal internal_z1: std_logic_vector(7 downto 0):=(others=>'0');        --internal channel 1
     signal internal_z2: std_logic_vector(7 downto 0):=(others=>'0');        --internal channel 2
@@ -57,7 +56,6 @@ begin
                     internal_z1<=(others=>'0');
                     internal_z2<=(others=>'0');
                     internal_z3<=(others=>'0');
-                    internal_valid<='0';
                     internal_address<=(others=>'0');
                     memory_enable<='0';
             end if;
@@ -66,7 +64,6 @@ begin
                     if(valid_input='1') then                                        --reads from memory only when valid_input is 1
                         memory_enable<='1';                                         --enables memory reading
                         mode<=WAIT_DATA;
-            
                     end if;
                     done<='0';
                     o_z0<=(others=>'0');
@@ -80,7 +77,6 @@ begin
                     --a clock cycle is at least 20 ns, so waiting for one clock cycle should be enough
                     mode<=SAVE;
                 when SAVE =>
-                    --memory_enable<='0';
                     case input_channel is
                         when "00" =>
                             internal_z0<=data;                        
@@ -102,9 +98,10 @@ begin
                     done<='1';
                     memory_enable<='0';
                     mode<=WAIT_INPUT;
+                when others =>
+                    mode<=WAIT_INPUT;
                 end case;
           end if;  
     end process;
-    --memory_enable<=valid_input;
     memory_address<=input_address;
 end DS_arch;
