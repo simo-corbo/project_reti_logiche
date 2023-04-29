@@ -1,4 +1,4 @@
-Running: xsim.dir/tb8_save_out_behav/xsimk.exe -simmode gui -wdb tb8_save_out_behav.wdb -simrunnum 0 -socket 58155
+Running: xsim.dir/tb8_save_out_behav/xsimk.exe -simmode gui -wdb tb8_save_out_behav.wdb -simrunnum 0 -socket 61686
 Design successfully loaded
 Design Loading Memory Usage: 9548 KB (Peak: 9548 KB)
 Design Loading CPU Usage: 0 ms

@@ -84,7 +84,9 @@ begin
                     mode<=GET_CH0;
                 when GET_CH0 =>                                                 --GET_CH0 saves the LSB of Channel  
                     mode<=GET_ADD;                                                  --transition to read the address
-                    internal_out_address(0)<=input;
+                    if(start='1') then
+                        internal_out_address(0)<=input;
+                    end if;
                 when GET_ADD =>                                                 --GET_ADD implements the shift register 
                     if start='0' then                                               --checks if GET_ADD is still necessary (input length can be arbitrary between 2 and 18)
                         mode<=SEND_INPUT;                                            --keeps the SEND_INPUT on for 2 clock cycles 

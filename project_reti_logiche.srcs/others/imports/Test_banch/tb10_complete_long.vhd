@@ -34,11 +34,11 @@ USE std.textio.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity tb10_complete_long is
+entity tb9_complete_long is
 --  Port ( );
-end tb10_complete_long;
+end tb9_complete_long;
 
-architecture tb10_arch of tb10_complete_long is
+architecture tb10_arch of tb9_complete_long is
 
  CONSTANT CLOCK_PERIOD : TIME := 100 ns;
     SIGNAL tb_done : STD_LOGIC;

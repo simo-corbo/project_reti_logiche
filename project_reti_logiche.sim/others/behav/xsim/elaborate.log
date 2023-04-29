@@ -1,6 +1,6 @@
 Vivado Simulator v2022.2
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb10_complete_long_behav xil_defaultlib.tb10_complete_long -log elaborate.log 
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb9_complete_long_behav xil_defaultlib.tb9_complete_long -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -17,5 +17,5 @@ Compiling package ieee.std_logic_signed
 Compiling architecture dst_arch of entity xil_defaultlib.DeSerializeTransform [deserializetransform_default]
 Compiling architecture ds_arch of entity xil_defaultlib.DataSwitch [dataswitch_default]
 Compiling architecture project_reti_logiche_arch of entity xil_defaultlib.project_reti_logiche [project_reti_logiche_default]
-Compiling architecture tb10_arch of entity xil_defaultlib.tb10_complete_long
-Built simulation snapshot tb10_complete_long_behav
+Compiling architecture tb10_arch of entity xil_defaultlib.tb9_complete_long
+Built simulation snapshot tb9_complete_long_behav

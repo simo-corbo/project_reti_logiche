@@ -6,10 +6,10 @@ USE ieee.numeric_std.ALL;
 USE ieee.std_logic_unsigned.ALL;
 USE std.textio.ALL;
 
-ENTITY project_tb IS
-END project_tb;
+ENTITY project_tb7 IS
+END project_tb7;
 
-ARCHITECTURE projecttb OF project_tb IS
+ARCHITECTURE projecttb OF project_tb7 IS
     CONSTANT CLOCK_PERIOD : TIME := 100 ns;
     SIGNAL tb_done : STD_LOGIC;
     SIGNAL mem_address : STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');
