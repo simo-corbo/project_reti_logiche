@@ -33,7 +33,7 @@ end project_reti_logiche;
 
 architecture project_reti_logiche_arch of project_reti_logiche is
    --Signals
-   signal valid_input: std_logic:='0';
+   signal internal_valid_input: std_logic:='0';
    signal valid_data: std_logic:='0';
    signal address: std_logic_vector(15 downto 0):=(others=>'0');
    signal channel: std_logic_vector(1 downto 0):=(others=>'0');
@@ -57,19 +57,14 @@ architecture project_reti_logiche_arch of project_reti_logiche is
         i_clk: in std_logic;                        		--clock signal from input
         
         valid_input: in std_logic;                       	--valid input from DeSerT
-        input_channel: in std_logic_vector(1 downto 0);  		    --channel selector from DeSerT
-        input_address: in std_logic_vector(15 downto 0);    		--memory address from DeSerT
-        
+        input_channel: in std_logic_vector(1 downto 0);  		    --channel selector from DeSerT        
         data: in std_logic_vector(7 downto 0);              --data from memory        
         
         o_z0: out std_logic_vector(7 downto 0);             --channel 0
         o_z1: out std_logic_vector(7 downto 0);             --channel 1
         o_z2: out std_logic_vector(7 downto 0);             --channel 2
         o_z3: out std_logic_vector(7 downto 0);             --channel 3
-        done: out std_logic;                                --end of elaboration
-        
-        memory_enable: out std_logic;
-        memory_address: out std_logic_vector(15 downto 0)
+        done: out std_logic                                --end of elaboration
         );
     end component;
     
@@ -80,17 +75,17 @@ architecture project_reti_logiche_arch of project_reti_logiche is
                     i_clk => i_clk,
                     input => i_w,
                                   
-                    valid_input=>valid_input,
-                    address=>address, 
+                    valid_input=>internal_valid_input,
+                    
+                    address=>o_mem_addr, 
                     channel=>channel
                  );
         DS     : DataSwitch port map(
                     reset => i_rst,
                     i_clk =>i_clk,
                     
-                    valid_input => valid_input,
+                    valid_input => internal_valid_input,
                     input_channel =>channel,
-                    input_address => address,
                     
                     data =>i_mem_data,
                     
@@ -98,11 +93,12 @@ architecture project_reti_logiche_arch of project_reti_logiche is
                     o_z1 => o_z1,
                     o_z2 => o_z2,
                     o_z3 => o_z3,
-                    done => o_done,
+                    done => o_done
                     
-                    memory_enable => o_mem_en,
-                    memory_address => o_mem_addr
+--                    memory_enable => o_mem_en
+                    --memory_address => o_mem_addr
                     );
 
         o_mem_we<='0'; --memory writing not required
+        o_mem_en<=internal_valid_input;
 end project_reti_logiche_arch;

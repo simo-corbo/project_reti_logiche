@@ -1,0 +1,4 @@
+Time resolution is 1 ps
+Failure: Simulation Ended! TEST PASSATO 
+Time: 35100 ns  Iteration: 0  Process: /tb10_complete_long/testRoutine  File: C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/others/imports/Test_banch/tb10_complete_long.vhd
+$finish called at time : 35100 ns : File "C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/others/imports/Test_banch/tb10_complete_long.vhd" Line 356
