@@ -41,24 +41,33 @@ begin
         case mode is
             when WAIT_INPUT =>
                     valid_input<='0';                                           --input is not valid yet
+                    internal_channel<=internal_channel;
             when GET_CH1=>
+                    valid_input<='0';
                     internal_channel(1)<=internal_input;                                 --the first bit read from input is the MSB of channel
+                    internal_channel(0)<=internal_channel(0);
             when GET_CH0 =>
                     valid_input<='0';                                               --redundant setting of valid_input
+                    internal_channel(1)<=internal_channel(1);
                     internal_channel(0)<=internal_input;                                     --read from input LSB of channel
             when GET_ADD =>
                     if start='1' then                                               --checks if GET_ADD is still necessary (input length can be arbitrary between 2 and 18)
                         valid_input<='0';                                               --redundant setting of valid_input
---                        internal_out_address(15 downto 1) <= internal_out_address(14 downto 0); --shift register
---                        internal_out_address(0)<=internal_input;
+                        internal_channel<=internal_channel;
+
                     else                                    
                         valid_input<='1';                                            --end of input reading
+                        internal_channel<=internal_channel;
                     end if;
             when SEND_INPUT =>
                         valid_input<='1';
+                        internal_channel<=internal_channel;
             when RST => 
                     valid_input<='0';                                               --input not valid during reset
                     internal_channel<=(others=>'0');                                --Internal reset
+            when others =>
+                    valid_input<='0';
+                    internal_channel<=internal_channel;
          end case;
      end process;
 
@@ -72,7 +81,11 @@ begin
             else
             case mode is
                 when RST =>
-                    mode<=WAIT_INPUT;
+                    if(start='0') then
+                        mode<=WAIT_INPUT;
+                    else
+                        mode<=GET_CH1;
+                    end if;
                 when WAIT_INPUT =>                                              --WAIT_INPUT state
                     if(start='1') then                                              --start check  
                         internal_out_address<=(others=>'0');
@@ -86,6 +99,8 @@ begin
                     mode<=GET_ADD;                                                  --transition to read the address
                     if(start='1') then
                         internal_out_address(0)<=input;
+                    else
+                        
                     end if;
                 when GET_ADD =>                                                 --GET_ADD implements the shift register 
                     if start='0' then                                               --checks if GET_ADD is still necessary (input length can be arbitrary between 2 and 18)
@@ -101,6 +116,7 @@ begin
                         mode<=WAIT_INPUT;
                 end case;
           end if;  
+          else
           end if;
           internal_input<=input;
     end process;

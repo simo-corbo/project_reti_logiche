@@ -3,7 +3,7 @@ vhdl xil_defaultlib  \
 "../../../../project_reti_logiche.srcs/sources_1/new/10727140.vhd" \
 "../../../../project_reti_logiche.srcs/sources_1/new/DataSwitch.vhd" \
 "../../../../project_reti_logiche.srcs/sources_1/new/DeSerializeTransform.vhd" \
-"../../../../project_reti_logiche.srcs/others/imports/Test_banch/tb10_complete_long.vhd" \
+"../../../../project_reti_logiche.srcs/others/imports/Test_banch/tb_4.vhd" \
 
 # Do not sort compile order
 nosort
