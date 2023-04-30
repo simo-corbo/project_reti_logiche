@@ -1,0 +1,7 @@
+Running: xsim.dir/tb4_all_outs_with_overwrite_func_synth/xsimk.exe -simmode gui -wdb tb4_all_outs_with_overwrite_func_synth.wdb -simrunnum 0 -socket 52100
+Design successfully loaded
+Design Loading Memory Usage: 10532 KB (Peak: 10532 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 11284 KB (Peak: 11284 KB)
+Simulation CPU Usage: 15 ms

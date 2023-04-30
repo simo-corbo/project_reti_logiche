@@ -1,4 +1,7 @@
 Time resolution is 1 ps
-Failure: Simulation Ended! TEST PASSATO (EXAMPLE)
-Time: 12600 ns  Iteration: 0  Process: /project_tb4/testRoutine  File: C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/others/imports/Test_banch/tb_4.vhd
-$finish called at time : 12600 ns : File "C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/others/imports/Test_banch/tb_4.vhd" Line 222
+Stopped at time : 1250 ns : File "C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/DataSwitch.vhd" Line 79
+Stopped at time : 4350 ns : File "C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/DataSwitch.vhd" Line 79
+Stopped at time : 7650 ns : File "C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/DataSwitch.vhd" Line 79
+Failure: Simulation Ended! TEST PASSATO 
+Time: 35100 ns  Iteration: 0  Process: /tb9_complete_long/testRoutine  File: C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/others/imports/Test_banch/tb10_complete_long.vhd
+$finish called at time : 35100 ns : File "C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/others/imports/Test_banch/tb10_complete_long.vhd" Line 356

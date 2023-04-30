@@ -28,15 +28,6 @@ end DataSwitch;
 
 
 architecture DS_arch of DataSwitch is
-    --FSM   -----------|------------|--------------------|-------------------------------------------------------------------------------------------------------|
-    --      |    ##    |    mode    |   State on FSM     |   notes                                                                                               |
-    --      -----------|------------|--------------------|-------------------------------------------------------------------------------------------------------|
-    --      |    00    | WAIT_INPUT |   Waitaddress      |   waits until start 0->1 and in that occasion, puts the first bit received in address                 |
-    --      |    01    | GET_CH0    |   Get Channel 0    |   puts the second bit received in address                                                             |
-    --      |    10    | GET_ADD    |   Get Address      |   starts from address 0...0 and keeps shifting from right to left the bit in input while start is 1   |
-    --      |    11    | SEND_INPUT |   Send Address     |   as start 1->0, the memory is enabled, reading from the address vector                               |                                                        |	
-    --      -----------------------------------------------------------------------------------------------------------------------------------------------------|
-    
     type STATES is (WAIT_INPUT, WAIT_DATA, SAVE, SHOW, RST);                     --States definition
     signal mode   : STATES :=RST;                                           --current FSM State
 
@@ -52,31 +43,81 @@ begin
     begin
         if(i_clk'event and i_clk='1') then                                      --DeSerT synchronized on clock's raising edge
             if(reset='1') then                                                  --Reset trigger
+                    internal_z0<=(others=>'0');                                     --internal signal reset
+                    internal_z1<=(others=>'0');
+                    internal_z2<=(others=>'0');
+                    internal_z3<=(others=>'0');
                     mode<=RST;                                               --when in reset returns to WAIT_INPUT state
             else
             case mode is
                 when RST =>
+                    internal_z0<=(others=>'0');                                     --internal signal reset
+                    internal_z1<=(others=>'0');
+                    internal_z2<=(others=>'0');
+                    internal_z3<=(others=>'0');
                     mode<=WAIT_INPUT;
                 when WAIT_INPUT =>                                              --WAIT_INPUT state
+                    internal_z0<=internal_z0;
+                    internal_z1<=internal_z1;
+                    internal_z2<=internal_z2;
+                    internal_z3<=internal_z3;
                     if(valid_input='1') then                                        --reads from memory only when valid_input is 1
                         mode<=WAIT_DATA;
                     else
                         mode<=WAIT_INPUT;
                     end if;
                 when WAIT_DATA =>
+                    internal_z0<=internal_z0;
+                    internal_z1<=internal_z1;
+                    internal_z2<=internal_z2;
+                    internal_z3<=internal_z3;
                     --ASSUMPTION
                     --the waiting time for the memory to return the correct data is 2 ns
                     --a clock cycle is at least 20 ns, so waiting for one clock cycle should be enough
                     mode<=SAVE;
                 when SAVE =>
+                 case input_channel is
+                        when "00" =>
+                            internal_z0<=data;                        
+                            internal_z1<=internal_z1;
+                            internal_z2<=internal_z2;
+                            internal_z3<=internal_z3;
+                        when "01" =>
+                            internal_z0<=internal_z0;
+                            internal_z1<=data;
+                            internal_z2<=internal_z2;
+                            internal_z3<=internal_z3;
+                        when "10" =>
+                            internal_z0<=internal_z0;
+                            internal_z1<=internal_z1;
+                            internal_z2<=data;
+                            internal_z3<=internal_z3;
+                        when "11" =>
+                            internal_z0<=internal_z0;
+                            internal_z1<=internal_z1;
+                            internal_z2<=internal_z2;
+                            internal_z3<=data;
+                        when others =>
+                            internal_z0<=internal_z0;
+                            internal_z1<=internal_z1;
+                            internal_z2<=internal_z2;
+                            internal_z3<=internal_z3;
+                    end case;
                     mode<=SHOW;
                 when SHOW =>
+                    internal_z0<=internal_z0;
+                    internal_z1<=internal_z1;
+                    internal_z2<=internal_z2;
+                    internal_z3<=internal_z3;
                     mode<=WAIT_INPUT;
                 when others =>
+                    internal_z0<=internal_z0;
+                    internal_z1<=internal_z1;
+                    internal_z2<=internal_z2;
+                    internal_z3<=internal_z3;
                     mode<=WAIT_INPUT;
                 end case;
-          end if; 
-          else
+          end if;
           end if; 
     end process;
 
@@ -84,89 +125,42 @@ begin
     mode_func: process(mode)
     begin
         case mode is
-            when RST =>
-                    internal_z0<=(others=>'0');                                     --internal signal reset
-                    internal_z1<=(others=>'0');
-                    internal_z2<=(others=>'0');
-                    internal_z3<=(others=>'0');
-                    done<='0';
-                    o_z0<=(others=>'0');
-                    o_z1<=(others=>'0');
-                    o_z2<=(others=>'0');
-                    o_z3<=(others=>'0');
-            when WAIT_INPUT =>
-                    done<='0';
-                    internal_z0<=internal_z0;
-                    internal_z1<=internal_z1;
-                    internal_z2<=internal_z2;
-                    internal_z3<=internal_z3;
-                    o_z0<=(others=>'0');
-                    o_z1<=(others=>'0');
-                    o_z2<=(others=>'0');
-                    o_z3<=(others=>'0');
-            when WAIT_DATA =>
-                    done<='0';
-                    internal_z0<=internal_z0;
-                    internal_z1<=internal_z1;
-                    internal_z2<=internal_z2;
-                    internal_z3<=internal_z3;
-                    o_z0<=(others=>'0');
-                    o_z1<=(others=>'0');
-                    o_z2<=(others=>'0');
-                    o_z3<=(others=>'0');
-            when SAVE =>
-                    case input_channel is
-                        when "00" =>
-                            internal_z0<=data;                        
-                            internal_z1<=internal_z1;
-                            internal_z2<=internal_z2;
-                            internal_z3<=internal_z3;
-                        when "01" =>
-                            internal_z1<=data;
-                            internal_z0<=internal_z0;
-                            internal_z2<=internal_z2;
-                            internal_z3<=internal_z3;
-                        when "10" =>
-                            internal_z2<=data;
-                            internal_z1<=internal_z1;
-                            internal_z0<=internal_z0;
-                            internal_z3<=internal_z3;
-                        when "11" =>
-                            internal_z3<=data;
-                            internal_z1<=internal_z1;
-                            internal_z2<=internal_z2;
-                            internal_z0<=internal_z0;
-                        when others =>
-                            internal_z0<=internal_z0;
-                            internal_z1<=internal_z1;
-                            internal_z2<=internal_z2;
-                            internal_z3<=internal_z3;
-                    end case;
-                    o_z0<=(others=>'0');
-                    o_z1<=(others=>'0');
-                    o_z2<=(others=>'0');
-                    o_z3<=(others=>'0');
-                    done<='0';
+--            when RST =>
+--                    done<='0';
+--                    o_z0<=(others=>'0');
+--                    o_z1<=(others=>'0');
+--                    o_z2<=(others=>'0');
+--                    o_z3<=(others=>'0');
+--            when WAIT_INPUT =>
+--                    done<='0';
+--                    o_z0<=(others=>'0');
+--                    o_z1<=(others=>'0');
+--                    o_z2<=(others=>'0');
+--                    o_z3<=(others=>'0');
+--            when WAIT_DATA =>
+--                    done<='0';
+--                    o_z0<=(others=>'0');
+--                    o_z1<=(others=>'0');
+--                    o_z2<=(others=>'0');
+--                    o_z3<=(others=>'0');
+--            when SAVE =>
+--                    o_z0<=(others=>'0');
+--                    o_z1<=(others=>'0');
+--                    o_z2<=(others=>'0');
+--                    o_z3<=(others=>'0');
+--                    done<='0';
              when SHOW =>
                     o_z0<=internal_z0;
                     o_z1<=internal_z1;
                     o_z2<=internal_z2;
                     o_z3<=internal_z3;
                     done<='1';
-                    internal_z0<=internal_z0;
-                    internal_z1<=internal_z1;
-                    internal_z2<=internal_z2;
-                    internal_z3<=internal_z3;
              when others =>
                     o_z0<=(others=>'0');
                     o_z1<=(others=>'0');
                     o_z2<=(others=>'0');
                     o_z3<=(others=>'0');
                     done<='0';
-                    internal_z0<=internal_z0;
-                    internal_z1<=internal_z1;
-                    internal_z2<=internal_z2;
-                    internal_z3<=internal_z3;
              end case;
     end process;
 end DS_arch;

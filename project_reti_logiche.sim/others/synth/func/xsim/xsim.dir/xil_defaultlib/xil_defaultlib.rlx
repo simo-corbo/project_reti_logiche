@@ -1,0 +1,21 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.sim/others/synth/func/xsim/tb9_complete_long_func_synth.vhd,1682871660,vhdl,,,,dataswitch;deserializetransform;project_reti_logiche,,,,,,,,
+C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/others/imports/Test_banch/passed tb1_empty_address.vhd,1682679486,vhdl,,,,tb1,,,,,,,,
+C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/others/imports/Test_banch/tb10_complete_long.vhd,1682766202,vhdl,,,,tb9_complete_long,,,,,,,,
+C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/others/imports/Test_banch/tb2_full_address.vhd,1682675702,vhdl,,,,tb2_full_address,,,,,,,,
+C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/others/imports/Test_banch/tb3_all_outs.vhd,1682675702,vhdl,,,,tb3_all_outs,,,,,,,,
+C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/others/imports/Test_banch/tb4_all_outs_with_overwrite.vhd,1682689915,vhdl,,,,tb4_all_outs_with_overwrite,,,,,,,,
+C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/others/imports/Test_banch/tb5_reset_start_1.vhd,1682675702,vhdl,,,,tb5_reset_start_1,,,,,,,,
+C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/others/imports/Test_banch/tb6_reset_ask_mem.vhd,1682675702,vhdl,,,,tb6_reset_ask_mem,,,,,,,,
+C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/others/imports/Test_banch/tb7_reset_read_mem.vhd,1682675703,vhdl,,,,tb7_reset_read_mem,,,,,,,,
+C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/others/imports/Test_banch/tb8_save_out.vhd,1682679963,vhdl,,,,tb8_save_out,,,,,,,,
+C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/others/imports/Test_banch/tb_1.vhd,1682766076,vhdl,,,,project_tb1,,,,,,,,
+C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/others/imports/Test_banch/tb_2.vhd,1682766093,vhdl,,,,project_tb2,,,,,,,,
+C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/others/imports/Test_banch/tb_3.vhd,1682766134,vhdl,,,,project_tb3,,,,,,,,
+C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/others/imports/Test_banch/tb_4.vhd,1682766149,vhdl,,,,project_tb4,,,,,,,,
+C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/others/imports/Test_banch/tb_5 bho.vhd,1682679855,vhdl,,,,project_tb5,,,,,,,,
+C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/others/imports/Test_banch/tb_6.vhd,1682766115,vhdl,,,,project_tb6,,,,,,,,
+C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.srcs/others/imports/Test_banch/tb_7.vhd,1682766101,vhdl,,,,project_tb7,,,,,,,,

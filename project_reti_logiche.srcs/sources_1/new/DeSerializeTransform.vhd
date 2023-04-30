@@ -32,42 +32,32 @@ architecture DST_arch of DeSerializeTransform is
     signal mode   : STATES :=RST;                                        --current FSM State
     signal internal_channel: std_logic_vector(1 downto 0) :=(others=>'0');      --link between input and channel(0)
     signal internal_out_address: std_logic_vector(15 downto 0) := (others=>'0');--shifter register
-    signal internal_input: std_logic:='0';
+--    signal internal_input: std_logic:='0';
 
 begin
 
     mode_funct: process(mode)
     begin
-        case mode is
+    valid_input<='0';
+        case mode is 
             when WAIT_INPUT =>
                     valid_input<='0';                                           --input is not valid yet
-                    internal_channel<=internal_channel;
             when GET_CH1=>
                     valid_input<='0';
-                    internal_channel(1)<=internal_input;                                 --the first bit read from input is the MSB of channel
-                    internal_channel(0)<=internal_channel(0);
             when GET_CH0 =>
                     valid_input<='0';                                               --redundant setting of valid_input
-                    internal_channel(1)<=internal_channel(1);
-                    internal_channel(0)<=internal_input;                                     --read from input LSB of channel
             when GET_ADD =>
                     if start='1' then                                               --checks if GET_ADD is still necessary (input length can be arbitrary between 2 and 18)
                         valid_input<='0';                                               --redundant setting of valid_input
-                        internal_channel<=internal_channel;
-
                     else                                    
                         valid_input<='1';                                            --end of input reading
-                        internal_channel<=internal_channel;
                     end if;
             when SEND_INPUT =>
                         valid_input<='1';
-                        internal_channel<=internal_channel;
             when RST => 
                     valid_input<='0';                                               --input not valid during reset
-                    internal_channel<=(others=>'0');                                --Internal reset
             when others =>
                     valid_input<='0';
-                    internal_channel<=internal_channel;
          end case;
      end process;
 
@@ -77,33 +67,46 @@ begin
         if(i_clk'event and i_clk='1') then                                      --DeSerT synchronized on clock's raising edge
             if(reset='1') then                                                  --Reset trigger
                     internal_out_address<=(others=>'0');   
+                    internal_channel<=(others=>'0');
                     mode<=RST;                                               --when in reset returns to WAIT_INPUT state
             else
             case mode is
                 when RST =>
+                    internal_out_address<=(others=>'0');
+                    internal_channel<=(others=>'0');
                     if(start='0') then
                         mode<=WAIT_INPUT;
                     else
+                        internal_channel(1)<=input;
+                        internal_channel(0)<=internal_channel(0);
                         mode<=GET_CH1;
                     end if;
                 when WAIT_INPUT =>                                              --WAIT_INPUT state
+                    internal_out_address<=(others=>'0');
                     if(start='1') then                                              --start check  
-                        internal_out_address<=(others=>'0');
+                        internal_channel(1)<=input;
+                        internal_channel(0)<=internal_channel(0);
                         mode<=GET_CH1;                                              --transition in order to read the LSB of the output channel
                     else
+                        internal_channel<=internal_channel;
                         mode<=WAIT_INPUT;
                     end if;
                 when GET_CH1 =>
-                    mode<=GET_CH0;
+                        internal_channel(0)<=input;
+                        internal_channel(1)<=internal_channel(1);
+                        internal_out_address<=(others=>'0');
+                    mode<=GET_CH0;         
                 when GET_CH0 =>                                                 --GET_CH0 saves the LSB of Channel  
-                    mode<=GET_ADD;                                                  --transition to read the address
+                    internal_channel<=internal_channel;                                                  
+                    internal_out_address<=(others=>'0');
                     if(start='1') then
                         internal_out_address(0)<=input;
-                    else
-                        
-                    end if;
+                    end if;--transition to read the address
+                    mode<=GET_ADD;
                 when GET_ADD =>                                                 --GET_ADD implements the shift register 
-                    if start='0' then                                               --checks if GET_ADD is still necessary (input length can be arbitrary between 2 and 18)
+                    internal_channel<=internal_channel;
+                    if start='0' then
+                        internal_out_address<=internal_out_address;
                         mode<=SEND_INPUT;                                            --keeps the SEND_INPUT on for 2 clock cycles 
                     else
                        internal_out_address(15 downto 1) <= internal_out_address(14 downto 0); --shift register
@@ -111,14 +114,17 @@ begin
                        mode<=GET_ADD;                           
                     end if;
                 when SEND_INPUT =>
+                        internal_channel<=internal_channel;
+                        internal_out_address<=internal_out_address;
                         mode<=WAIT_INPUT;
                 when others =>
+                        internal_channel<=internal_channel;
+                        internal_out_address<=internal_out_address;
                         mode<=WAIT_INPUT;
                 end case;
           end if;  
-          else
           end if;
-          internal_input<=input;
+--          internal_input<=input;
     end process;
     address<=internal_out_address;                												 --internal wiring
     channel<=internal_channel;    

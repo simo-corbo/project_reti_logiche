@@ -1,7 +1,7 @@
-Running: xsim.dir/tb5_reset_start_1_behav/xsimk.exe -simmode gui -wdb tb5_reset_start_1_behav.wdb -simrunnum 0 -socket 65373
+Running: xsim.dir/tb5_reset_start_1_behav/xsimk.exe -simmode gui -wdb tb5_reset_start_1_behav.wdb -simrunnum 0 -socket 51914
 Design successfully loaded
-Design Loading Memory Usage: 9552 KB (Peak: 9552 KB)
-Design Loading CPU Usage: 0 ms
+Design Loading Memory Usage: 9556 KB (Peak: 9556 KB)
+Design Loading CPU Usage: 15 ms
 Simulation completed
-Simulation Memory Usage: 10140 KB (Peak: 10140 KB)
-Simulation CPU Usage: 0 ms
+Simulation Memory Usage: 10148 KB (Peak: 10148 KB)
+Simulation CPU Usage: 15 ms
