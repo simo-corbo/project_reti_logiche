@@ -2,3 +2,6 @@ Running: xsim.dir/tb9_complete_long_func_synth/xsimk.exe -simmode gui -wdb tb9_c
 Design successfully loaded
 Design Loading Memory Usage: 9868 KB (Peak: 9868 KB)
 Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 10972 KB (Peak: 10972 KB)
+Simulation CPU Usage: 15 ms
