@@ -1,4 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti Logiche/project_reti_logiche/project_reti_logiche.sim/others/synth/func/xsim/tb9_complete_long_func_synth.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'DataSwitch'
-INFO: [VRFC 10-3107] analyzing entity 'DeSerializeTransform'
-INFO: [VRFC 10-3107] analyzing entity 'project_reti_logiche'

@@ -41,16 +41,23 @@ end tb5_reset_start_1;
 architecture tb5_arch of tb5_reset_start_1 is
 
 CONSTANT CLOCK_PERIOD : TIME := 100 ns;
-    SIGNAL tb_done : STD_LOGIC;
+     SIGNAL i_rst : STD_LOGIC := '0';
+    SIGNAL i_start : STD_LOGIC := '0';
+    SIGNAL i_w : STD_LOGIC;
+    SIGNAL done : STD_LOGIC;
+    SIGNAL memory_enable : STD_LOGIC;
+
+    
+    SIGNAL i_clk : STD_LOGIC := '0';
+    
     SIGNAL mem_address : STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');
-    SIGNAL tb_rst : STD_LOGIC := '0';
-    SIGNAL tb_start : STD_LOGIC := '0';
-    SIGNAL tb_clk : STD_LOGIC := '0';
-    SIGNAL mem_o_data, mem_i_data : STD_LOGIC_VECTOR (7 DOWNTO 0);
-    SIGNAL enable_wire : STD_LOGIC;
+
+    
+    SIGNAL data: STD_LOGIC_VECTOR (7 DOWNTO 0);
+        SIGNAL o_z0, o_z1, o_z2, o_z3 : STD_LOGIC_VECTOR (7 DOWNTO 0);
+
     SIGNAL mem_we : STD_LOGIC;
-    SIGNAL tb_z0, tb_z1, tb_z2, tb_z3 : STD_LOGIC_VECTOR (7 DOWNTO 0);
-    SIGNAL tb_w : STD_LOGIC;
+    SIGNAL mem_i_data : STD_LOGIC_VECTOR (7 DOWNTO 0);
 
     CONSTANT SCENARIOLENGTH : INTEGER := 13; -- 5 + 9 + 3    (RST) + (RST) + (CH0-MEM[2])
     SIGNAL scenario_rst : unsigned(0 TO SCENARIOLENGTH - 1)     := "00110" & "00010000";
@@ -91,21 +98,21 @@ CONSTANT CLOCK_PERIOD : TIME := 100 ns;
 BEGIN
     UUT : project_reti_logiche
     PORT MAP(
-        i_clk => tb_clk,
-        i_start => tb_start,
-        i_rst => tb_rst,
-        i_w => tb_w,
+        i_clk => i_clk,
+        i_start => i_start,
+        i_rst => i_rst,
+        i_w => i_w,
 
-        o_z0 => tb_z0,
-        o_z1 => tb_z1,
-        o_z2 => tb_z2,
-        o_z3 => tb_z3,
-        o_done => tb_done,
+        o_z0 => o_z0,
+        o_z1 => o_z1,
+        o_z2 => o_z2,
+        o_z3 => o_z3,
+        o_done => done,
 
         o_mem_addr => mem_address,
-        o_mem_en => enable_wire,
+        o_mem_en => memory_enable,
         o_mem_we => mem_we,
-        i_mem_data => mem_o_data
+        i_mem_data => data
     );
 
 
@@ -113,34 +120,34 @@ BEGIN
     CLK_GEN : PROCESS IS
     BEGIN
         WAIT FOR CLOCK_PERIOD/2;
-        tb_clk <= NOT tb_clk;
+        i_clk <= NOT i_clk;
     END PROCESS CLK_GEN;
 
 
     -- Process related to the memory
-    MEM : PROCESS (tb_clk)
+    MEM : PROCESS (i_clk)
     BEGIN
-        IF tb_clk'event AND tb_clk = '1' THEN
-            IF enable_wire = '1' THEN
+        IF i_clk'event AND i_clk = '1' THEN
+            IF memory_enable = '1' THEN
                 IF mem_we = '1' THEN
                     RAM(conv_integer(mem_address)) <= mem_i_data;
-                    mem_o_data <= mem_i_data AFTER 1 ns;
+                    data <= mem_i_data AFTER 1 ns;
                 ELSE
-                    mem_o_data <= RAM(conv_integer(mem_address)) AFTER 1 ns; 
+                    data <= RAM(conv_integer(mem_address)) AFTER 1 ns; 
                 END IF;
                 ASSERT (mem_we = '1' OR mem_we = '0') REPORT "o_mem_we in an unexpected state" SEVERITY failure;
             END IF;
-            ASSERT (enable_wire = '1' OR enable_wire = '0') REPORT "o_mem_en in an unexpected state" SEVERITY failure;
+            ASSERT (memory_enable = '1' OR memory_enable = '0') REPORT "o_mem_en in an unexpected state" SEVERITY failure;
         END IF;
     END PROCESS;
     
     -- This process provides the correct scenario on the signal controlled by the TB
-    createScenario : PROCESS (tb_clk)
+    createScenario : PROCESS (i_clk)
     BEGIN
-        IF tb_clk'event AND tb_clk = '0' THEN
-            tb_rst <= scenario_rst(0);
-            tb_w <= scenario_w(0);
-            tb_start <= scenario_start(0);
+        IF i_clk'event AND i_clk = '0' THEN
+            i_rst <= scenario_rst(0);
+            i_w <= scenario_w(0);
+            i_start <= scenario_start(0);
             scenario_rst <= scenario_rst(1 TO SCENARIOLENGTH - 1) & '0';
             scenario_w <= scenario_w(1 TO SCENARIOLENGTH - 1) & '0';
             scenario_start <= scenario_start(1 TO SCENARIOLENGTH - 1) & '0';
@@ -152,34 +159,34 @@ BEGIN
     BEGIN
         mem_i_data <= "00000000";
         -- wait for 10000 ns;
-        WAIT UNTIL tb_rst = '1';
-        WAIT UNTIL tb_rst = '0';
-        ASSERT tb_done = '0' REPORT "TEST FALLITO (postreset DONE != 0 )" SEVERITY failure;
-        ASSERT tb_z0 = "00000000" REPORT "TEST FALLITO (postreset Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z0))) severity failure; 
-        ASSERT tb_z1 = "00000000" REPORT "TEST FALLITO (postreset Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z1))) severity failure; 
-        ASSERT tb_z2 = "00000000" REPORT "TEST FALLITO (postreset Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z2))) severity failure; 
-        ASSERT tb_z3 = "00000000" REPORT "TEST FALLITO (postreset Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z3))) severity failure; 
-        WAIT UNTIL tb_start = '1';
-        ASSERT tb_z0 = "00000000" REPORT "TEST FALLITO (poststart Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z0))) severity failure; 
-        ASSERT tb_z1 = "00000000" REPORT "TEST FALLITO (poststart Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z1))) severity failure; 
-        ASSERT tb_z2 = "00000000" REPORT "TEST FALLITO (poststart Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z2))) severity failure; 
-        ASSERT tb_z3 = "00000000" REPORT "TEST FALLITO (poststart Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z3))) severity failure;
-        WAIT UNTIL tb_rst = '1';
-        WAIT UNTIL tb_rst = '0';
-        ASSERT tb_done = '0' REPORT "TEST FALLITO (postreset DONE != 0 )" SEVERITY failure;
-        ASSERT tb_z0 = "00000000" REPORT "TEST FALLITO (postreset Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z0))) severity failure; 
-        ASSERT tb_z1 = "00000000" REPORT "TEST FALLITO (postreset Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z1))) severity failure; 
-        ASSERT tb_z2 = "00000000" REPORT "TEST FALLITO (postreset Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z2))) severity failure; 
-        ASSERT tb_z3 = "00000000" REPORT "TEST FALLITO (postreset Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z3))) severity failure; 
---        WAIT UNTIL tb_start = '1';
-        ASSERT tb_z0 = "00000000" REPORT "TEST FALLITO (poststart Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z0))) severity failure; 
-        ASSERT tb_z1 = "00000000" REPORT "TEST FALLITO (poststart Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z1))) severity failure; 
-        ASSERT tb_z2 = "00000000" REPORT "TEST FALLITO (poststart Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z2))) severity failure; 
-        ASSERT tb_z3 = "00000000" REPORT "TEST FALLITO (poststart Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z3))) severity failure; 
-        WAIT UNTIL tb_done = '1';
-        --WAIT UNTIL rising_edge(tb_clk);
+        WAIT UNTIL i_rst = '1';
+        WAIT UNTIL i_rst = '0';
+        ASSERT done = '0' REPORT "TEST FALLITO (postreset DONE != 0 )" SEVERITY failure;
+        ASSERT o_z0 = "00000000" REPORT "TEST FALLITO (postreset Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(o_z0))) severity failure; 
+        ASSERT o_z1 = "00000000" REPORT "TEST FALLITO (postreset Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(o_z1))) severity failure; 
+        ASSERT o_z2 = "00000000" REPORT "TEST FALLITO (postreset Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(o_z2))) severity failure; 
+        ASSERT o_z3 = "00000000" REPORT "TEST FALLITO (postreset Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(o_z3))) severity failure; 
+        WAIT UNTIL i_start = '1';
+        ASSERT o_z0 = "00000000" REPORT "TEST FALLITO (poststart Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(o_z0))) severity failure; 
+        ASSERT o_z1 = "00000000" REPORT "TEST FALLITO (poststart Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(o_z1))) severity failure; 
+        ASSERT o_z2 = "00000000" REPORT "TEST FALLITO (poststart Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(o_z2))) severity failure; 
+        ASSERT o_z3 = "00000000" REPORT "TEST FALLITO (poststart Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(o_z3))) severity failure;
+        WAIT UNTIL i_rst = '1';
+        WAIT UNTIL i_rst = '0';
+        ASSERT done = '0' REPORT "TEST FALLITO (postreset DONE != 0 )" SEVERITY failure;
+        ASSERT o_z0 = "00000000" REPORT "TEST FALLITO (postreset Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(o_z0))) severity failure; 
+        ASSERT o_z1 = "00000000" REPORT "TEST FALLITO (postreset Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(o_z1))) severity failure; 
+        ASSERT o_z2 = "00000000" REPORT "TEST FALLITO (postreset Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(o_z2))) severity failure; 
+        ASSERT o_z3 = "00000000" REPORT "TEST FALLITO (postreset Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(o_z3))) severity failure; 
+--        WAIT UNTIL i_start = '1';
+        ASSERT o_z0 = "00000000" REPORT "TEST FALLITO (poststart Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(o_z0))) severity failure; 
+        ASSERT o_z1 = "00000000" REPORT "TEST FALLITO (poststart Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(o_z1))) severity failure; 
+        ASSERT o_z2 = "00000000" REPORT "TEST FALLITO (poststart Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(o_z2))) severity failure; 
+        ASSERT o_z3 = "00000000" REPORT "TEST FALLITO (poststart Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(o_z3))) severity failure; 
+        WAIT UNTIL done = '1';
+        --WAIT UNTIL rising_edge(i_clk);
         WAIT FOR CLOCK_PERIOD/2;
-        ASSERT tb_z0 = std_logic_vector(to_unsigned(75, 8))  REPORT "TEST FALLITO (Z0 ---) found " & integer'image(to_integer(unsigned(tb_z2))) severity failure; --. Expected  209  found " & integer'image(tb_z0))))  severity failure;
+        ASSERT o_z0 = std_logic_vector(to_unsigned(75, 8))  REPORT "TEST FALLITO (Z0 ---) found " & integer'image(to_integer(unsigned(o_z2))) severity failure; --. Expected  209  found " & integer'image(o_z0))))  severity failure;
         
         ASSERT false REPORT "Simulation Ended! TEST PASSATO (EXAMPLE)" SEVERITY failure;
     END PROCESS testRoutine;

@@ -109,7 +109,11 @@ begin
                     internal_z1<=internal_z1;
                     internal_z2<=internal_z2;
                     internal_z3<=internal_z3;
-                    mode<=WAIT_INPUT;
+                    if(valid_input='1') then
+                        mode<=WAIT_DATA;
+                    else
+                        mode<=WAIT_INPUT;
+                    end if;
                 when others =>
                     internal_z0<=internal_z0;
                     internal_z1<=internal_z1;

@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"gt_func_synth.vhd" \
+"../../../../../project_reti_logiche.srcs/others/new/general_test.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,7 @@
+Running: xsim.dir/gt_behav/xsimk.exe -simmode gui -wdb gt_behav.wdb -simrunnum 0 -socket 49232
+Design successfully loaded
+Design Loading Memory Usage: 9304 KB (Peak: 9304 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 9896 KB (Peak: 9896 KB)
+Simulation CPU Usage: 15 ms

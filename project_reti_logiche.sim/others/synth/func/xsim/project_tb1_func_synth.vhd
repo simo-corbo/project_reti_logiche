@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
--- Date        : Sun Apr 30 18:11:25 2023
+-- Date        : Wed May 10 16:12:14 2023
 -- Host        : LAPTOP-4J4IK2F8 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -mode funcsim -nolib -force -file {C:/Users/simon/OneDrive - Politecnico di Milano/3/Reti
 --               Logiche/project_reti_logiche/project_reti_logiche.sim/others/synth/func/xsim/project_tb1_func_synth.vhd}
@@ -103,13 +103,13 @@ begin
   Q(1 downto 0) <= \^q\(1 downto 0);
 \FSM_onehot_mode[1]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFAE"
+      INIT => X"AFAE"
     )
         port map (
       I0 => \FSM_onehot_mode_reg_n_0_[0]\,
-      I1 => \^q\(0),
+      I1 => \^q\(1),
       I2 => o_mem_en_OBUF,
-      I3 => \^q\(1),
+      I3 => \^q\(0),
       O => \FSM_onehot_mode[1]_i_1_n_0\
     );
 \FSM_onehot_mode_reg[0]\: unisim.vcomponents.FDSE
@@ -936,7 +936,7 @@ entity DeSerializeTransform is
     channel : out STD_LOGIC_VECTOR ( 1 downto 0 );
     i_start_IBUF : in STD_LOGIC;
     i_w_IBUF : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Q : in STD_LOGIC_VECTOR ( 1 downto 0 );
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     CLK : in STD_LOGIC
   );
@@ -952,43 +952,42 @@ architecture STRUCTURE of DeSerializeTransform is
   signal mode : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \mode__0\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_onehot_mode[2]_i_1\ : label is "soft_lutpair21";
   attribute SOFT_HLUTNM of \FSM_sequential_mode[0]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \FSM_sequential_mode[1]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \FSM_sequential_mode[2]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \FSM_sequential_mode[1]_i_1\ : label is "soft_lutpair21";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_sequential_mode_reg[0]\ : label is "rst:000,get_ch0:011,wait_input:001,get_ch1:010,get_add:100,send_input:101";
   attribute FSM_ENCODED_STATES of \FSM_sequential_mode_reg[1]\ : label is "rst:000,get_ch0:011,wait_input:001,get_ch1:010,get_add:100,send_input:101";
   attribute FSM_ENCODED_STATES of \FSM_sequential_mode_reg[2]\ : label is "rst:000,get_ch0:011,wait_input:001,get_ch1:010,get_add:100,send_input:101";
   attribute SOFT_HLUTNM of \internal_out_address[0]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \internal_out_address[10]_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \internal_out_address[11]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \internal_out_address[12]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \internal_out_address[13]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \internal_out_address[14]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \internal_out_address[1]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \internal_out_address[2]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \internal_out_address[3]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \internal_out_address[4]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \internal_out_address[5]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \internal_out_address[6]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \internal_out_address[7]_i_1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \internal_out_address[8]_i_1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \internal_out_address[9]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \internal_out_address[10]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \internal_out_address[11]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \internal_out_address[12]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \internal_out_address[13]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \internal_out_address[14]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \internal_out_address[1]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \internal_out_address[2]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \internal_out_address[3]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \internal_out_address[4]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \internal_out_address[5]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \internal_out_address[6]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \internal_out_address[7]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \internal_out_address[8]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \internal_out_address[9]_i_1\ : label is "soft_lutpair26";
   attribute SOFT_HLUTNM of o_mem_en_OBUF_inst_i_1 : label is "soft_lutpair20";
 begin
   channel(1 downto 0) <= \^channel\(1 downto 0);
   \internal_out_address_reg[15]_0\(15 downto 0) <= \^internal_out_address_reg[15]_0\(15 downto 0);
-\FSM_onehot_mode[2]_i_1\: unisim.vcomponents.LUT5
+\FSM_onehot_mode[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00008808"
+      INIT => X"3033000020220000"
     )
         port map (
       I0 => Q(0),
-      I1 => mode(2),
-      I2 => i_start_IBUF,
-      I3 => mode(0),
-      I4 => mode(1),
+      I1 => mode(1),
+      I2 => mode(0),
+      I3 => i_start_IBUF,
+      I4 => mode(2),
+      I5 => Q(1),
       O => D(0)
     );
 \FSM_sequential_mode[0]_i_1\: unisim.vcomponents.LUT4
@@ -1526,6 +1525,7 @@ DeSerT: entity work.DeSerializeTransform
      port map (
       CLK => i_clk_IBUF_BUFG,
       D(0) => DeSerT_n_0,
+      Q(1) => o_done_OBUF,
       Q(0) => DS_n_1,
       SR(0) => i_rst_IBUF,
       channel(1 downto 0) => channel(1 downto 0),
