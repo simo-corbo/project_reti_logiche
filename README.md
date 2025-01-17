@@ -66,7 +66,8 @@ The following test scenarios were conducted to validate the component:
 1. Clone the repository:
    ```bash
    git clone https://github.com/simo-corbo/project_reti_logiche.git
-   cd project_reti_logiche```
+   cd project_reti_logiche
+   ```
 2. Open the project in Vivado
 3. Use the source files in the src folder to load the design.
 4. Run simulations using the testbenches in the sim folder to verify functionality.
